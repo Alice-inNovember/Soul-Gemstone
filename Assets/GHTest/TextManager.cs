@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TextManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TextMeshProUGUI[] pageTexts;
 
-    // Update is called once per frame
-    void Update()
+    public void UpdatePageText(int pageIndex, string newText)
     {
-        
+        if (pageIndex >= 0 && pageIndex < pageTexts.Length)
+        {
+            pageTexts[pageIndex].text = newText;
+        }
     }
 }
