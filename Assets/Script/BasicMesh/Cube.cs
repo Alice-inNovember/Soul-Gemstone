@@ -122,7 +122,7 @@ namespace Script.BasicMesh
         mesh.triangles = triangles;
         mesh.uv = uvs;
         mesh.RecalculateNormals();
-
+        mesh.vertices[0]
         // MeshFilter 및 MeshRenderer 추가 및 설정
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
         MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
