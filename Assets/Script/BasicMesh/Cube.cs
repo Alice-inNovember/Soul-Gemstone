@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Test
+namespace Script.BasicMesh
 {
     public class Cube : MonoBehaviour
     {
