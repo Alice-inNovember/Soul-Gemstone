@@ -11,8 +11,8 @@ public class DailyLogData
     public bool checkListChecked;
     public string log;
     public int rate;
-    [FormerlySerializedAs("weather")] public EWeather eWeather;
-    [FormerlySerializedAs("weeks")] [FormerlySerializedAs("days")] public EDays eDays;
+    public EWeather eWeather;
+    public EDays eDays;
     public string date; // DateTime을 문자열로 저장
 
     public DailyLogData(string mCheckListLog, bool mCheckListChecked,string mLog, int mRate, EWeather mEWeather, EDays mEDays, DateTime mDate)

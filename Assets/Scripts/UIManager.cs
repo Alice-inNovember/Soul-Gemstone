@@ -10,8 +10,7 @@ public class UIManager : MonoBehaviour
 {
     public TMP_Text TODOCheckListText;
     public TMP_Text DayLogText;
-    public TMP_Text DayRateText;
-    public TMP_Text DateText;
+    public Slider DayRate;
     public TMP_Dropdown WeatherDropdown;
     public TMP_Dropdown WeekDropDown;
     public Toggle TODOChecked;
@@ -40,10 +39,17 @@ public class UIManager : MonoBehaviour
 
     private void DoneOnClicked()
     {
-        Debug.Log(DateText.text);
-        DateTime date;
-        DateTime.TryParse(DateText.text, out date);
-        DailyLogData test1 = new DailyLogData(TODOCheckListText.text,TODOChecked.isOn,DayLogText.text, int.Parse(DayRateText.text), (EWeather)WeatherDropdown.value, (EDays)WeekDropDown.value, date);
+        Debug.Log(TODOCheckListText.text + "\n");
+        Debug.Log(TODOChecked.isOn + "\n");
+        Debug.Log(DayLogText.text + "\n");
+        Debug.Log((EWeather)WeatherDropdown.value + "\n");
+        Debug.Log((EDays)WeekDropDown.value + "\n");
+        Debug.Log(DateTime.Now + "\n");
+        
+        DailyLogData test1 = new DailyLogData(TODOCheckListText.text,TODOChecked.isOn,DayLogText.text, (int)DayRate.value, (EWeather)WeatherDropdown.value, (EDays)WeekDropDown.value, DateTime.Now);
+        
+        
+        
         logManager.AddLog(test1);
         
         List<DailyLogData> logsByDate = logManager.GetLogsByDate(DateTime.Now);
