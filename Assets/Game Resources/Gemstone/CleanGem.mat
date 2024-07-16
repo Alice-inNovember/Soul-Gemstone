@@ -42,11 +42,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Parallax_Amplitude: 20
+    - _Metallic: 0.85
+    - _Parallax_Amplitude: 10
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Smoothness: 0
     - _Steps: 5
-    - _Transparency: 0.481
+    - _Transparency: 0.75
     m_Colors:
     - _BaseColor: {r: 0.9292453, g: 1, b: 0.98388773, a: 0}
     - _EmmitionColor: {r: 0.7877358, g: 0.9463636, b: 1, a: 0}
