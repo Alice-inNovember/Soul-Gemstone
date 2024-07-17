@@ -29,11 +29,11 @@ namespace Script.UI
         void Start()
         {
             EventManager.Instance.AddListener(EEventType.ScreenInterection, this);
-            var bookIDList = DatabaseManager.Instance.GetBookIDList();
-            //foreach (var bookID in bookIDList)
-            //{
-            //    CreateBook(DatabaseManager.Instance.GetBookData(bookID));
-            //}
+            // var bookIDList = DataManager.Instance.GetBookIDList();
+            // //foreach (var bookID in bookIDList)
+            // //{
+            // //    CreateBook(DatabaseManager.Instance.GetBookData(bookID));
+            // //}
         }
 
         public void OnPreparation()
