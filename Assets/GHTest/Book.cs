@@ -1,28 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Util.EventSystem;
 using EventType = Util.EventSystem.EventType;
 
-public class Book : MonoBehaviour, IEventListener
+public class Book : MonoBehaviour
 {
-    public int bookIndex;
-    
-    private float moveDistance = 660f;
-    private Vector3 sideScale = new Vector3(0.7f, 0.7f, 1f);
-    private Vector3 centerScale = Vector3.one;
-    
     void Start()
     {
-        //EventManager.Instance.AddListener(EventType.BookInterection, this);
+        GetComponent<Button>().onClick.AddListener(() =>
+        {
+            UIManager.Instance.CreateDiary();
+        });
     }
+    
+    public int bookid;
 
-    public void OnEvent(EventType eventType, Component sender, object param = null)
+    [SerializeField]
+    private TMP_Text dateText;
+    
+    public void Bookinit(int id, string date)
     {
-        
+        bookid = id;
+        dateText.text = date;
     }
-    
-    
 }
 

@@ -8,7 +8,7 @@ using Util.EventSystem;
 using Util.SingletonSystem;
 using EventType = Util.EventSystem.EventType;
 
-public class BookManager : MonoBehaviourSingleton<BookManager>, IEventListener
+public class BookManager : MonoBehaviour, IEventListener
 {
     [FormerlySerializedAs("books")] [Header("Book Sprites")]
     public Sprite[] bookSprites;
@@ -18,7 +18,7 @@ public class BookManager : MonoBehaviourSingleton<BookManager>, IEventListener
     public GameObject bookPrefab;
     
     [Header("Book Movement")]
-    [SerializeField] private List<GameObject> bookList = new List<GameObject>();
+    public List<GameObject> bookList = new List<GameObject>();
     [SerializeField] private int currentBookIndex = 0;
     [SerializeField] private Vector3 sideScale = new Vector3(0.8f, 0.8f, 1f);
     [SerializeField] private Vector3 centerScale = Vector3.one;
@@ -27,6 +27,11 @@ public class BookManager : MonoBehaviourSingleton<BookManager>, IEventListener
     void Start()
     {
         EventManager.Instance.AddListener(EventType.ScreenInterection, this);
+    }
+
+    public void OnPreparation()
+    {
+        UIManager.Instance.MovePreparation(true);
     }
     
     public void CreateBook()
