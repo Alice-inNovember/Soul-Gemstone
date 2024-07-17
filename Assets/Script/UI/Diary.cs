@@ -18,8 +18,8 @@ namespace Script.UI
         [SerializeField] private bool isCheck2;
         [SerializeField] private Slider evaluation1;
         [SerializeField] private Slider evaluation2;
-    
-    
+        
+        
 
         public void SetDiary(string date, string diary, string checkList1, string checkList2, bool check1, bool check2, int eval1, int eval2)
         {

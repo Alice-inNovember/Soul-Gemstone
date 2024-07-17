@@ -68,14 +68,18 @@ namespace Script.UI
             UIManager.Instance.MovePreparation(false);
         }
     
+        
     
         public void CreateDiary()
         {
-            var dateTime = DateTime.Now.ToString("yy-MM-dd");
+            var dateTime = UIManager.Instance.GetLastSunday().ToString("yy-MM-dd");
+            var fullDateTime = UIManager.Instance.GetLastSunday().ToString("yy-MM-dd") + " ~ " +
+                               UIManager.Instance.GetLastSunday().AddDays(6).ToString("yy-MM-dd");
+            diaryArray[0].GetComponent<Summary>().SetSummary(fullDateTime, "");
             for (var i = 1; i < diaryArray.Length; i++)
             {
                 diaryArray[i].GetComponent<Diary>().SetDiary(dateTime, "", checkText1, checkText2, false, false, 1, 1);
-                dateTime = DateTime.Now.AddDays(i).ToString("yy-MM-dd");
+                dateTime = UIManager.Instance.GetLastSunday().AddDays(i).ToString("yy-MM-dd");
             }
         }
     }
