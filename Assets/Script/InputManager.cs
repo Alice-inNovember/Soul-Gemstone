@@ -1,125 +1,108 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Util.EventSystem;
-using EventType = Util.EventSystem.EventType;
 
-public class InputManager : MonoBehaviour
+namespace Script
 {
-    Vector3 startPos;
-    Vector3 endPos;
-    
-    public float swipeDistance;
-    public bool isSwiping = false;
-    public EventType eventType;
-
-    public enum InteractionType
-    { 
-        LeftSwipe,
-        RightSwipe,
-        LeftTap,
-        RightTap
-    }
-
-    private static InputManager _instance;
-    
-    public static InputManager Instance
+    public class InputManager : MonoBehaviour
     {
-        get
+        public enum EInteractionType
         {
-            if (_instance == null)
+            LeftSwipe,
+            RightSwipe,
+            LeftTap,
+            RightTap
+        }
+
+        private static InputManager _instance;
+
+        public float swipeDistance;
+        public bool isSwiping;
+        public EEventType eventType;
+        private Vector3 endPos;
+        private Vector3 startPos;
+
+        public static InputManager Instance
+        {
+            get
             {
-                _instance = FindObjectOfType<InputManager>();
                 if (_instance == null)
                 {
-                    GameObject singletonObject = new GameObject();
-                    _instance = singletonObject.AddComponent<InputManager>();
+                    _instance = FindObjectOfType<InputManager>();
+                    if (_instance == null)
+                    {
+                        var singletonObject = new GameObject();
+                        _instance = singletonObject.AddComponent<InputManager>();
+                    }
+                    //DontDestroyOnLoad(_instance.gameObject);
                 }
-                //DontDestroyOnLoad(_instance.gameObject);
-            }
-            return _instance;
-        }
-    }
-    
-    private void Awake()
-    {
-        if (_instance == null)
-        {
-            _instance = this;
-            //DontDestroyOnLoad(gameObject);
-        }
-        else if (_instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
-    
-    void TouchInput()
-    {
-        if (Input.touchCount > 0)
-        {
-            if (Input.GetTouch(0).phase == TouchPhase.Began)
-            {
-                startPos = Input.GetTouch(0).position;
-            }
 
-            if (Input.GetTouch(0).phase == TouchPhase.Ended)
+                return _instance;
+            }
+        }
+
+        private void Awake()
+        {
+            if (_instance == null)
+                _instance = this;
+            //DontDestroyOnLoad(gameObject);
+            else if (_instance != this) Destroy(gameObject);
+        }
+
+        private void Update()
+        {
+            MouseInput();
+        }
+
+        private void TouchInput()
+        {
+            if (Input.touchCount > 0)
             {
-                endPos = Input.GetTouch(0).position;
+                if (Input.GetTouch(0).phase == TouchPhase.Began) startPos = Input.GetTouch(0).position;
+
+                if (Input.GetTouch(0).phase == TouchPhase.Ended)
+                {
+                    endPos = Input.GetTouch(0).position;
+                    swipeDistance = (endPos - startPos).magnitude;
+                    if (swipeDistance > 100)
+                        if (Mathf.Abs(endPos.x - startPos.x) > Mathf.Abs(endPos.y - startPos.y))
+                        {
+                            if (endPos.x > startPos.x)
+                            {
+                                EventManager.Instance.PostNotification(EEventType.ScreenInterection, this,
+                                    EInteractionType.RightSwipe);
+                                Debug.Log("Right Swipe");
+                            }
+                            else
+                            {
+                                EventManager.Instance.PostNotification(EEventType.ScreenInterection, this,
+                                    EInteractionType.LeftSwipe);
+                                Debug.Log("Left Swipe");
+                            }
+                        }
+                }
+            }
+        }
+
+        private void MouseInput()
+        {
+            if (Input.GetMouseButtonDown(0)) startPos = Input.mousePosition;
+            if (Input.GetMouseButtonUp(0))
+            {
+                endPos = Input.mousePosition;
                 swipeDistance = (endPos - startPos).magnitude;
                 if (swipeDistance > 100)
-                {
-                    
                     if (Mathf.Abs(endPos.x - startPos.x) > Mathf.Abs(endPos.y - startPos.y))
                     {
                         if (endPos.x > startPos.x)
-                        {
-                            EventManager.Instance.PostNotification(EventType.ScreenInterection, this, InteractionType.RightSwipe);
-                            Debug.Log("Right Swipe");
-                        }
-                        else
-                        {
-                            EventManager.Instance.PostNotification(EventType.ScreenInterection, this, InteractionType.LeftSwipe);
-                            Debug.Log("Left Swipe");
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    void MouseInput()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            startPos = Input.mousePosition;
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            endPos = Input.mousePosition;
-            swipeDistance = (endPos - startPos).magnitude;
-            if (swipeDistance > 100)
-            {
-                if (Mathf.Abs(endPos.x - startPos.x) > Mathf.Abs(endPos.y - startPos.y))
-                {
-                    if (endPos.x > startPos.x)
-                    {
-                        EventManager.Instance.PostNotification(EventType.ScreenInterection, this, InteractionType.RightSwipe);
+                            EventManager.Instance.PostNotification(EEventType.ScreenInterection, this,
+                                EInteractionType.RightSwipe);
                         //Debug.Log("Right Swipe");
-                    }
-                    else
-                    {
-                        EventManager.Instance.PostNotification(EventType.ScreenInterection, this, InteractionType.LeftSwipe);
+                        else
+                            EventManager.Instance.PostNotification(EEventType.ScreenInterection, this,
+                                EInteractionType.LeftSwipe);
                         //Debug.Log("Left Swipe");
                     }
-                }
             }
         }
-    }
-    
-    void Update()
-    {
-        MouseInput();
-        
     }
 }

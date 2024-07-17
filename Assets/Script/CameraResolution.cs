@@ -1,14 +1,14 @@
 using UnityEngine;
 
-namespace Camera
+namespace Script
 {
     public class CameraResolution : MonoBehaviour
     {
         private void Start()
         {
-            var thisCamera = GetComponent<UnityEngine.Camera>();
+            var thisCamera = GetComponent<Camera>();
             var rect = thisCamera.rect;
-            var scaleHeight = (float)Screen.width / Screen.height / ((float)9 / 16);// (가로 / 세로)
+            var scaleHeight = (float)Screen.width / Screen.height / ((float)9 / 16); // (가로 / 세로)
             var scaleWidth = 1f / scaleHeight;
             if (scaleHeight < 1)
             {

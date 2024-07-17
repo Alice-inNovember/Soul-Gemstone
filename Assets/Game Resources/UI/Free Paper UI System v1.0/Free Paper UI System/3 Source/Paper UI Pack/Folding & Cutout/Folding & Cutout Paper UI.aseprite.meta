@@ -73,7 +73,7 @@ ScriptedImporter:
   previousAsepriteImporterSettings:
     fileImportMode: 0
     importHiddenLayers: 0
-    layerImportMode: 1
+    layerImportMode: 0
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -124,454 +124,2793 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 583031793
-    name: Folding & Cutout Paper UI
-    layerFlags: 0
+    guid: -1944999476
+    name: Paper
+    layerFlags: 3
+    layerType: 1
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 1
+    guid: -169700644
+    name: Back Paper
+    layerFlags: 19
     layerType: 0
     blendMode: 0
     cells:
-    - name: Folding & Cutout Paper UI_Frame_0
+    - name: Back Paper
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: f83ba60cca889794d8103ed0896f76ff
-    - name: Folding & Cutout Paper UI_Frame_1
-      frameIndex: 1
+        y: 2249
+        width: 1827
+        height: 1213
+      spriteId: 23e4117e97c1c374bace0017a30bbaf6
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 0
+  - layerIndex: 2
+    guid: 388695837
+    name: Front Paper
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Front Paper
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
+        x: 176
         y: 60
-        width: 5597
-        height: 3641
-      spriteId: 4e9a3ef209d4c774fa8097d3f3361257
-    - name: Folding & Cutout Paper UI_Frame_2
-      frameIndex: 2
+        width: 2416
+        height: 3376
+      spriteId: 217701327da29ee47802df9eea0564f4
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 0
+  - layerIndex: 3
+    guid: -1396762524
+    name: Decoration 1
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Decoration 1
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
+        x: 176
         y: 60
-        width: 5597
-        height: 3641
-      spriteId: a2627aa3307e3fc4a8a9ebbe4ade12ca
-    - name: Folding & Cutout Paper UI_Frame_3
-      frameIndex: 3
+        width: 2400
+        height: 3361
+      spriteId: 5a57057df5bf7a240b4490e3ae739d50
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 0
+  - layerIndex: 4
+    guid: -206595250
+    name: Decoration 2
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Decoration 2
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 9537d1edf1257e74b9cd6fac705391da
-    - name: Folding & Cutout Paper UI_Frame_4
-      frameIndex: 4
+        x: 912
+        y: 2193
+        width: 1306
+        height: 625
+      spriteId: ea637e6ce6cf5d040afc37b60d4c7df9
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 0
+  - layerIndex: 5
+    guid: 2056750768
+    name: Content
+    layerFlags: 19
+    layerType: 1
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 6
+    guid: 1343088015
+    name: Dialogue Box
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Dialogue Box
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 5b3161fa3aa376544b3fac840c681ae1
-    - name: Folding & Cutout Paper UI_Frame_5
-      frameIndex: 5
+        x: 207
+        y: 2306
+        width: 175
+        height: 143
+      spriteId: bf33de347e232b840a57cd6e19d5172f
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 5
+  - layerIndex: 7
+    guid: -1017121289
+    name: Holder
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Holder
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 9525b593ee144854182be9216a32122b
-    - name: Folding & Cutout Paper UI_Frame_6
-      frameIndex: 6
+        x: 221
+        y: 2306
+        width: 1717
+        height: 1095
+      spriteId: 47ebf869e952f63498b8816fdf68e841
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 5
+  - layerIndex: 8
+    guid: 2099246661
+    name: Buttons
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Buttons
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 2a2efda4f036813488528501ea2a853b
-    - name: Folding & Cutout Paper UI_Frame_7
-      frameIndex: 7
+        x: 344
+        y: 2196
+        width: 1815
+        height: 1132
+      spriteId: 94da7d06c4a2f734c97f8022d6f50a94
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 5
+  - layerIndex: 9
+    guid: 2100807874
+    name: Progress Bars
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Progress Bars
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 3219cf9ad0fafce48aa563ed8e0f37b5
-    - name: Folding & Cutout Paper UI_Frame_8
-      frameIndex: 8
+        x: 245
+        y: 2850
+        width: 1561
+        height: 509
+      spriteId: df3a6ac0dfdd0e54b8b2265822489ea6
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 5
+  - layerIndex: 10
+    guid: 1446179318
+    name: Map
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: 5
+  - layerIndex: 11
+    guid: -1757617389
+    name: icons
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: icons
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: f352f8af0a2be4f4dbc7a5bf562dbdf4
-    - name: Folding & Cutout Paper UI_Frame_9
-      frameIndex: 9
+        x: 244
+        y: 2308
+        width: 1470
+        height: 1065
+      spriteId: 3f8377a678b660744ac257ef53df27a9
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 5
+  - layerIndex: 12
+    guid: 932971266
+    name: items
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: items
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: cb351ca2b28f4984fa1ea84dedb27aba
-    - name: Folding & Cutout Paper UI_Frame_10
-      frameIndex: 10
+        x: 236
+        y: 2868
+        width: 1219
+        height: 521
+      spriteId: ed09444a07af07e47aa1b065eae9f0fa
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 5
+  - layerIndex: 13
+    guid: -362419694
+    name: High lighter
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: High lighter
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: a69b416fd932b354db50a3d12720bd83
-    - name: Folding & Cutout Paper UI_Frame_11
-      frameIndex: 11
+        x: 224
+        y: 2594
+        width: 633
+        height: 769
+      spriteId: b0440a4ea313720439f752a618bde02e
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 5
+  - layerIndex: 14
+    guid: 2024063239
+    name: Text
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Text
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 3aba2f7b81f5fc749bbb55074039dcb4
-    - name: Folding & Cutout Paper UI_Frame_12
-      frameIndex: 12
+        x: 221
+        y: 2199
+        width: 1973
+        height: 1215
+      spriteId: ae08d7906e6a1bc4a841d34eee5c58ca
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 5
+  - layerIndex: 15
+    guid: 952032440
+    name: Stamp
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Stamp
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: cfc568730445bae4ebe4380d70508275
-    - name: Folding & Cutout Paper UI_Frame_13
-      frameIndex: 13
+        x: 177
+        y: 1990
+        width: 1647
+        height: 85
+      spriteId: 5a34231a7f940f14daf8e73828cff793
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 5
+  - layerIndex: 16
+    guid: 1365513820
+    name: Day & Night
+    layerFlags: 19
+    layerType: 1
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 17
+    guid: -1738571689
+    name: Scene
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Scene
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: d6917c68612d8764b8b635d873fbb68f
-    - name: Folding & Cutout Paper UI_Frame_14
-      frameIndex: 14
+        x: 938
+        y: 2980
+        width: 59
+        height: 38
+      spriteId: 81f1bcdd126094843940e9e5d222c776
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 16
+  - layerIndex: 18
+    guid: 1912109786
+    name: Sun
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Sun
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: f79ddffd57d545040ba54aa96a793c3e
-    - name: Folding & Cutout Paper UI_Frame_15
-      frameIndex: 15
+        x: 956
+        y: 2989
+        width: 23
+        height: 23
+      spriteId: aeda1bc37f090534e9a1c3dd669bc1ab
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 16
+  - layerIndex: 19
+    guid: -1166010773
+    name: Clouds
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Clouds
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: fc6777477d913814a942b5c29668d5a9
-    - name: Folding & Cutout Paper UI_Frame_16
-      frameIndex: 16
+        x: 935
+        y: 2983
+        width: 64
+        height: 18
+      spriteId: e3215cf75f2336d41b25aef6a7f819f1
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 16
+  - layerIndex: 20
+    guid: 1048988528
+    name: Clock
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Clock
+      frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 557e7e6b776125c4892026cc1c2c78c1
-    - name: Folding & Cutout Paper UI_Frame_17
-      frameIndex: 17
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 8e2021b7199b36442b7822c31914bbc4
-    - name: Folding & Cutout Paper UI_Frame_18
-      frameIndex: 18
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: d8c1a05cce8ecf94c82b533b6c6abaa3
-    - name: Folding & Cutout Paper UI_Frame_19
-      frameIndex: 19
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 5583517fc5b6f394d8a7db7318949d12
-    - name: Folding & Cutout Paper UI_Frame_20
-      frameIndex: 20
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 645cb56f1ecde8347b9898974ec21d6e
-    - name: Folding & Cutout Paper UI_Frame_21
-      frameIndex: 21
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 0f5ad2e6e1b64634a9c5a7b6f7ff85ea
-    - name: Folding & Cutout Paper UI_Frame_22
-      frameIndex: 22
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: ca79d47e2563a034aa6ee1a4f5284c5b
-    - name: Folding & Cutout Paper UI_Frame_23
-      frameIndex: 23
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 4bc62ad4aa8add844a8c5b802b3a3c17
-    - name: Folding & Cutout Paper UI_Frame_24
-      frameIndex: 24
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 961f2d6b7ca33b74b89e8c028e7d5ded
-    - name: Folding & Cutout Paper UI_Frame_25
-      frameIndex: 25
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: ef94720e296f5734188dc73242999c5d
-    - name: Folding & Cutout Paper UI_Frame_26
-      frameIndex: 26
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: f31c99aaf9f270b4bb7317af3dfb3e5a
-    - name: Folding & Cutout Paper UI_Frame_27
-      frameIndex: 27
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: ec706a7eee9cbc8429a1705531195550
-    - name: Folding & Cutout Paper UI_Frame_28
-      frameIndex: 28
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 689142c1c3270d54d8507900b1351705
-    - name: Folding & Cutout Paper UI_Frame_29
-      frameIndex: 29
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 1e6fdb01ddbe9c34fa595b12c888e056
-    - name: Folding & Cutout Paper UI_Frame_30
-      frameIndex: 30
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 093d78d35b5b09a44bf37c66ac97d656
-    - name: Folding & Cutout Paper UI_Frame_31
-      frameIndex: 31
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 4126b25f25ed19d47954b2e2b7f261f4
-    - name: Folding & Cutout Paper UI_Frame_32
-      frameIndex: 32
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5597
-        height: 3641
-      spriteId: 42a4316fcf5be1443a65de90f891134b
-    - name: Folding & Cutout Paper UI_Frame_33
-      frameIndex: 33
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5358
-        height: 3641
-      spriteId: d7fd77b67ecb5114a89da8326544e013
-    - name: Folding & Cutout Paper UI_Frame_34
-      frameIndex: 34
-      additiveSortOrder: 0
-      cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: abddafa7c9bf00c45aed81b5d3e94713
-    - name: Folding & Cutout Paper UI_Frame_35
+        x: 930
+        y: 2980
+        width: 75
+        height: 46
+      spriteId: 5f5e43b6f1dae9140898dc98788c1638
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
+    parentIndex: 16
+  - layerIndex: 21
+    guid: 952032418
+    name: Stamp
+    layerFlags: 3
+    layerType: 1
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 22
+    guid: -1418388392
+    name: Stamp Mark
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Stamp Mark
       frameIndex: 35
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 4fd08fe38f87f8441aaab777212403aa
-    - name: Folding & Cutout Paper UI_Frame_36
+        x: 919
+        y: 3366
+        width: 30
+        height: 30
+      spriteId: cdcb0c492928a064da71fa86937686b1
+    linkedCells:
+    - frameIndex: 36
+      linkedToFrame: 35
+    - frameIndex: 37
+      linkedToFrame: 35
+    - frameIndex: 38
+      linkedToFrame: 35
+    - frameIndex: 39
+      linkedToFrame: 35
+    - frameIndex: 40
+      linkedToFrame: 35
+    - frameIndex: 41
+      linkedToFrame: 35
+    - frameIndex: 42
+      linkedToFrame: 35
+    - frameIndex: 43
+      linkedToFrame: 35
+    - frameIndex: 44
+      linkedToFrame: 35
+    - frameIndex: 45
+      linkedToFrame: 35
+    - frameIndex: 46
+      linkedToFrame: 35
+    - frameIndex: 47
+      linkedToFrame: 35
+    - frameIndex: 48
+      linkedToFrame: 35
+    parentIndex: 21
+  - layerIndex: 23
+    guid: -1460640087
+    name: Stamp Animated
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Stamp Animated_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 875
+        y: 3321
+        width: 50
+        height: 51
+      spriteId: 7132a6691f780d641a70b18e069bb0a1
+    - name: Stamp Animated_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 881
+        y: 3327
+        width: 50
+        height: 51
+      spriteId: 83f13d700f0f82f47b14637b79613d37
+    - name: Stamp Animated_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 886
+        y: 3332
+        width: 50
+        height: 51
+      spriteId: 4d4e6bd6310cebd4992dac63b200245f
+    - name: Stamp Animated_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 892
+        y: 3338
+        width: 50
+        height: 51
+      spriteId: 3f59a3c5a5d8a7e41b9a32526f54478f
+    - name: Stamp Animated_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 897
+        y: 3343
+        width: 50
+        height: 51
+      spriteId: 35addbf83a1aa0c4f9be84d525c56056
+    - name: Stamp Animated_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 899
+        y: 3345
+        width: 49
+        height: 50
+      spriteId: 197fdc2f1f841744b9e7816e6d1a85b7
+    - name: Stamp Animated_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 901
+        y: 3347
+        width: 52
+        height: 53
+      spriteId: ea375dd616648fa4f8ce233194b79ce5
+    - name: Stamp Animated_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 901
+        y: 3347
+        width: 56
+        height: 57
+      spriteId: 5e442221a4be5124691739c3f9ca4ec1
+    - name: Stamp Animated_Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 901
+        y: 3347
+        width: 58
+        height: 59
+      spriteId: a9b1729442112964a8a7cb9dc7146154
+    - name: Stamp Animated_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 901
+        y: 3347
+        width: 48
+        height: 49
+      spriteId: e294b4310bd708b4baeda22461207549
+    - name: Stamp Animated_Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 901
+        y: 3347
+        width: 48
+        height: 49
+      spriteId: 15d2f7c6f345a724189f04fa37a46ff8
+    - name: Stamp Animated_Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 901
+        y: 3347
+        width: 48
+        height: 49
+      spriteId: 30488ccc98853514c8be93d0ffc50173
+    - name: Stamp Animated_Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 901
+        y: 3347
+        width: 48
+        height: 49
+      spriteId: 9112f65fe6f10144095e13da226194b3
+    - name: Stamp Animated_Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 901
+        y: 3347
+        width: 48
+        height: 49
+      spriteId: 15cab402eae18a34286601d6d61ae745
+    - name: Stamp Animated_Frame_35
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: 899
+        y: 3345
+        width: 49
+        height: 50
+      spriteId: 65ee3527c17420a408d7bef81c666483
+    - name: Stamp Animated_Frame_36
       frameIndex: 36
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 09180d30825664642b97a26d220fc546
-    - name: Folding & Cutout Paper UI_Frame_37
+        x: 897
+        y: 3343
+        width: 50
+        height: 51
+      spriteId: 31b8fda6c544bd74984f61855d995481
+    - name: Stamp Animated_Frame_37
       frameIndex: 37
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 254a0ba2c29606346bc318566bde94af
-    - name: Folding & Cutout Paper UI_Frame_38
+        x: 892
+        y: 3338
+        width: 50
+        height: 51
+      spriteId: 2fdbb8b1e23ad5a429a4cdb8992e51d3
+    - name: Stamp Animated_Frame_38
       frameIndex: 38
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 8bed86d96ee24024c8c89d9dcd9593d5
-    - name: Folding & Cutout Paper UI_Frame_39
+        x: 886
+        y: 3332
+        width: 50
+        height: 51
+      spriteId: dc90e98ccee590744b300e2ba4cf0348
+    - name: Stamp Animated_Frame_39
       frameIndex: 39
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: fa7e4424999f6c649a65ed8b1c5f448b
-    - name: Folding & Cutout Paper UI_Frame_40
+        x: 881
+        y: 3327
+        width: 50
+        height: 51
+      spriteId: 00b34ac5993474d469c6b2c836711bcf
+    - name: Stamp Animated_Frame_40
       frameIndex: 40
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 861775560425bee4f90a19d3dd3c2d70
-    - name: Folding & Cutout Paper UI_Frame_41
+        x: 875
+        y: 3321
+        width: 50
+        height: 51
+      spriteId: 07be57661b188c9419a12ad87e5e4701
+    linkedCells: []
+    parentIndex: 21
+  - layerIndex: 24
+    guid: 730039182
+    name: Content Appear Animation
+    layerFlags: 19
+    layerType: 1
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 25
+    guid: -299778388
+    name: Appear Animation
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Appear Animation_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 7e8a5989bf233664bbdcd98411e5d37e
+    - name: Appear Animation_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: aa6f6b9e62b0a0648932950f4b70ec6d
+    - name: Appear Animation_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: bf03da367ad27544fa5d5d1be20c6811
+    - name: Appear Animation_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 867395ab225906249ae584c9c01ab4dd
+    - name: Appear Animation_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: ed6a68387b5311947b068d6a0d6ef464
+    - name: Appear Animation_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: aa770ec34e26e594fbdc99bc799a72be
+    - name: Appear Animation_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 1572683ef1c0d444fa7189acbef02abf
+    - name: Appear Animation_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: bb2ef929a0ad42941bad4393875f9096
+    - name: Appear Animation_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 584fb95113b3ccf4380ea2569fbd4482
+    - name: Appear Animation_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 9d0797e384dc29f47ae1eeed0a982606
+    - name: Appear Animation_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 90fca2e01d1bba441aa9462e65f1924c
+    - name: Appear Animation_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: d25b0e28c438bac41bac987c1aff345c
+    - name: Appear Animation_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 60779921f4b862a4898f7b1b9ee51c3b
+    - name: Appear Animation_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 2b91827755e03b845bba4a4219b498aa
+    - name: Appear Animation_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 15f2e6778f5373f4595e5d3f64929e85
+    - name: Appear Animation_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: a082b5089b16e4f4c9079648a7933423
+    - name: Appear Animation_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 646362130fc9bfa4bbf9f09a19b316c1
+    - name: Appear Animation_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 20c9601bfa1ff9d4397a8ed7df8c3c17
+    - name: Appear Animation_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: fd93e88888c1e2544901c6d9a8b44743
+    - name: Appear Animation_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: b216608e8f8c20b49a0552a1920be03d
+    - name: Appear Animation_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 96ecdeba0f2cb0d48999361edfad3726
+    - name: Appear Animation_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: f9e047723352a684b9ef53fe4c0e36ec
+    - name: Appear Animation_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: ff9ec7f18451f5a4bb09e4dcc2cb22a2
+    - name: Appear Animation_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 5f02954dd5c6305448f3fce6fd36550e
+    - name: Appear Animation_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 85055bccd7bd79e4ebf9dae4690d25e5
+    - name: Appear Animation_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: ca69683e81c34ab4bb1979aad54df298
+    - name: Appear Animation_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2223
+        width: 5573
+        height: 1421
+      spriteId: 1afa6847c96c9aa48a3c8ea84ccabc52
+    - name: Appear Animation_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2284
+        width: 5573
+        height: 1360
+      spriteId: b8b252d983fe948408d9402e290e8af3
+    - name: Appear Animation_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2284
+        width: 5573
+        height: 1360
+      spriteId: 81121fa911f56d04fb072d606300a0d8
+    - name: Appear Animation_Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2284
+        width: 5573
+        height: 1360
+      spriteId: 59bb85a48551c71449a0e8d711377914
+    - name: Appear Animation_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 185
+        y: 2284
+        width: 5573
+        height: 1360
+      spriteId: 6aa53f1a1735ca74e8ea813b8666578f
+    - name: Appear Animation_Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5566
+        height: 1360
+      spriteId: b15cf9a2b35e52045b445d929317be29
+    - name: Appear Animation_Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5566
+        height: 1360
+      spriteId: 822ed21e51db4b145b4ffe91a81934c7
+    - name: Appear Animation_Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5327
+        height: 1128
+      spriteId: 73dc5628d502abb448aac25cb07cd743
+    - name: Appear Animation_Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1128
+      spriteId: 8f7998c9c8955bb40a7e36920de72ac4
+    - name: Appear Animation_Frame_35
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1128
+      spriteId: eb4c5fbc7e1de174a99634c4bcfd9aa4
+    - name: Appear Animation_Frame_36
+      frameIndex: 36
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1128
+      spriteId: 714992e40ac01804d94a69bdc3bfe0d0
+    - name: Appear Animation_Frame_37
+      frameIndex: 37
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1128
+      spriteId: e4879e77767b0b24e8d0a0d53b56830e
+    - name: Appear Animation_Frame_38
+      frameIndex: 38
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1128
+      spriteId: 19f77acc12666e34da2f7b059e3e73a8
+    - name: Appear Animation_Frame_39
+      frameIndex: 39
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1128
+      spriteId: 984c482381d3b8e46bc4da564431b3a7
+    - name: Appear Animation_Frame_40
+      frameIndex: 40
+      additiveSortOrder: 0
+      cellRect:
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1128
+      spriteId: 11c4c0bac89bc2747badfddbca25b1a8
+    - name: Appear Animation_Frame_41
       frameIndex: 41
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: af17964db7bdf594bbacc8fef8256851
-    - name: Folding & Cutout Paper UI_Frame_42
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1115
+      spriteId: 8ebd90c8a110b6d4abf93e57ad9b6dea
+    - name: Appear Animation_Frame_42
       frameIndex: 42
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: de4a07a12a296a8418cce08abf2ca861
-    - name: Folding & Cutout Paper UI_Frame_43
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1115
+      spriteId: 193c7156cba0cd946a7e1f98c446321f
+    - name: Appear Animation_Frame_43
       frameIndex: 43
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 53a9c74acaf13fb4a9ea266f069ed8df
-    - name: Folding & Cutout Paper UI_Frame_44
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1050
+      spriteId: f6b579fdee4a85547bf02e8c52d73c92
+    - name: Appear Animation_Frame_44
       frameIndex: 44
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 649a28e60a0580641be432c392c7b29a
-    - name: Folding & Cutout Paper UI_Frame_45
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1050
+      spriteId: 3f231cdd9f9f49042bebc2edbd412dc0
+    - name: Appear Animation_Frame_45
       frameIndex: 45
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: a8a59dd928be0c041a14ebabcde735e4
-    - name: Folding & Cutout Paper UI_Frame_46
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1050
+      spriteId: 1afe4b530a273734cb06214853547827
+    - name: Appear Animation_Frame_46
       frameIndex: 46
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 74b7def67f049924280e0cb7380cab93
-    - name: Folding & Cutout Paper UI_Frame_47
+        x: 192
+        y: 2284
+        width: 5302
+        height: 1050
+      spriteId: 99bc20911b78c7642b85c207422dd3cf
+    - name: Appear Animation_Frame_47
       frameIndex: 47
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 6c131439d03987f4e9898cd6e6a2afb9
-    - name: Folding & Cutout Paper UI_Frame_48
+        x: 192
+        y: 2375
+        width: 5302
+        height: 959
+      spriteId: 344172a826e888b4dac47ba9e36ff0db
+    - name: Appear Animation_Frame_48
       frameIndex: 48
       additiveSortOrder: 0
       cellRect:
-        x: 161
-        y: 60
-        width: 5333
-        height: 3641
-      spriteId: 5316784d4d56b3041a696c683eb4775b
+        x: 192
+        y: 2375
+        width: 5302
+        height: 959
+      spriteId: c57958433908dea4097fe623903875d7
     linkedCells: []
+    parentIndex: 24
+  - layerIndex: 26
+    guid: 433284378
+    name: Title
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Title
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 208
+        y: 3468
+        width: 2256
+        height: 233
+      spriteId: 2852622f87b20374d8ef9610c176e610
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    - frameIndex: 16
+      linkedToFrame: 0
+    - frameIndex: 17
+      linkedToFrame: 0
+    - frameIndex: 18
+      linkedToFrame: 0
+    - frameIndex: 19
+      linkedToFrame: 0
+    - frameIndex: 20
+      linkedToFrame: 0
+    - frameIndex: 21
+      linkedToFrame: 0
+    - frameIndex: 22
+      linkedToFrame: 0
+    - frameIndex: 23
+      linkedToFrame: 0
+    - frameIndex: 24
+      linkedToFrame: 0
+    - frameIndex: 25
+      linkedToFrame: 0
+    - frameIndex: 26
+      linkedToFrame: 0
+    - frameIndex: 27
+      linkedToFrame: 0
+    - frameIndex: 28
+      linkedToFrame: 0
+    - frameIndex: 29
+      linkedToFrame: 0
+    - frameIndex: 30
+      linkedToFrame: 0
+    - frameIndex: 31
+      linkedToFrame: 0
+    - frameIndex: 32
+      linkedToFrame: 0
+    - frameIndex: 33
+      linkedToFrame: 0
+    - frameIndex: 34
+      linkedToFrame: 0
+    - frameIndex: 35
+      linkedToFrame: 0
+    - frameIndex: 36
+      linkedToFrame: 0
+    - frameIndex: 37
+      linkedToFrame: 0
+    - frameIndex: 38
+      linkedToFrame: 0
+    - frameIndex: 39
+      linkedToFrame: 0
+    - frameIndex: 40
+      linkedToFrame: 0
+    - frameIndex: 41
+      linkedToFrame: 0
+    - frameIndex: 42
+      linkedToFrame: 0
+    - frameIndex: 43
+      linkedToFrame: 0
+    - frameIndex: 44
+      linkedToFrame: 0
+    - frameIndex: 45
+      linkedToFrame: 0
+    - frameIndex: 46
+      linkedToFrame: 0
+    - frameIndex: 47
+      linkedToFrame: 0
+    - frameIndex: 48
+      linkedToFrame: 0
     parentIndex: -1
   platformSettings:
   - name: DefaultTexturePlatform

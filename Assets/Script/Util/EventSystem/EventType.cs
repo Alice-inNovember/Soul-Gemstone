@@ -1,8 +1,9 @@
 ﻿namespace Util.EventSystem
 {
-	public enum EventType
+	public enum EEventType
 	{
 		none,
-		ScreenInterection
+		ScreenInterection,
+		DataLoad
 	}
 }
