@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 [System.Serializable]
 public class DailyLogData
 {
+    public string logGroup;
     public string checkListLog;
     public bool checkListChecked;
     public string log;
@@ -15,8 +16,9 @@ public class DailyLogData
     public EDays eDays;
     public string date; // DateTime을 문자열로 저장
 
-    public DailyLogData(string mCheckListLog, bool mCheckListChecked,string mLog, int mRate, EWeather mEWeather, EDays mEDays, DateTime mDate)
+    public DailyLogData(string mLogGroup, string mCheckListLog, bool mCheckListChecked,string mLog, int mRate, EWeather mEWeather, EDays mEDays, DateTime mDate)
     {
+        logGroup = mLogGroup;
         checkListLog = mCheckListLog;
         checkListChecked = mCheckListChecked;
         log = mLog;
@@ -63,9 +65,9 @@ public class DailyLogManager : MonoBehaviour
         return result;
     }
 
-    public List<DailyLogData> GetLogsByWeather(EWeather eWeather)
+    public List<DailyLogData> GetLogsByName(string name)
     {
-        List<DailyLogData> result = _logDataList.FindAll(log => log.eWeather == eWeather);
+        List<DailyLogData> result = _logDataList.FindAll(log => log.logGroup == name);
         return result;
     }
 

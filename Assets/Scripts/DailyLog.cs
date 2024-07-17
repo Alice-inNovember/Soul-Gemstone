@@ -45,9 +45,9 @@ public class DailyLog : MonoBehaviour
         
     }
 
-    public void SetDailyLog(string mCheckListLog, bool mChecked, string mLog, int mRate, EWeather mEWeather, EDays mEDays, int mYear, int mMonth, int mDate)
+    public void SetDailyLog(string mGroup, string mCheckListLog, bool mChecked, string mLog, int mRate, EWeather mEWeather, EDays mEDays, int mYear, int mMonth, int mDate)
     {
-        _data = new DailyLogData(mCheckListLog, mChecked, mLog, mRate, mEWeather, mEDays,
+        _data = new DailyLogData(mGroup, mCheckListLog, mChecked, mLog, mRate, mEWeather, mEDays,
             new DateTime(mYear, mMonth, mDate));
     }
 
