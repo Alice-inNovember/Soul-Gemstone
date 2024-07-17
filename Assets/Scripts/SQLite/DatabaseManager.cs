@@ -88,6 +88,7 @@ public class DatabaseManager : MonoBehaviour
                 command.CommandText = "DELETE FROM DiaryData";
                 command.ExecuteNonQuery();
             }
+
             connection.Close();
         }
     }
@@ -107,7 +108,7 @@ public class DatabaseManager : MonoBehaviour
         // 추가 데이터 삽입...
     }
 
-    void InsertBookData(BookData bookData)
+    public void InsertBookData(BookData bookData)
     {
         using (var connection = new SqliteConnection("Data Source=" + dbPath))
         {
@@ -127,29 +128,47 @@ public class DatabaseManager : MonoBehaviour
 
             foreach (var diaryData in bookData._diaryDatas)
             {
-                using (var diaryCommand = connection.CreateCommand())
-                {
-                    diaryCommand.CommandText = @"INSERT INTO DiaryData (BookID, CheckListLog, CheckListChecked, CheckListLog2, CheckListChecked2, Log, Rate, Rate2, Weather, Day, Date) 
-                                                 VALUES (@BookID, @CheckListLog, @CheckListChecked, @CheckListLog2, @CheckListChecked2, @Log, @Rate, @Rate2, @Weather, @Day, @Date)";
-                    diaryCommand.Parameters.AddWithValue("@BookID", diaryData.BookID);
-                    diaryCommand.Parameters.AddWithValue("@CheckListLog", diaryData.CheckListLog);
-                    diaryCommand.Parameters.AddWithValue("@CheckListChecked", diaryData.CheckListChecked ? 1 : 0);
-                    diaryCommand.Parameters.AddWithValue("@CheckListLog2", diaryData.CheckListLog2);
-                    diaryCommand.Parameters.AddWithValue("@CheckListChecked2", diaryData.CheckListChecked2 ? 1 : 0);
-                    diaryCommand.Parameters.AddWithValue("@Log", diaryData.Log);
-                    diaryCommand.Parameters.AddWithValue("@Rate", diaryData.Rate);
-                    diaryCommand.Parameters.AddWithValue("@Rate2", diaryData.Rate2);
-                    diaryCommand.Parameters.AddWithValue("@Weather", diaryData.Weather.ToString());
-                    diaryCommand.Parameters.AddWithValue("@Day", diaryData.Day.ToString());
-                    diaryCommand.Parameters.AddWithValue("@Date", diaryData.Date);
-                    diaryCommand.ExecuteNonQuery();
-                }
+                InsertDiaryData(diaryData, connection);
             }
+
+            connection.Close();
+        }
+    }
+    public void InsertDiaryData(DiaryData diaryData, SqliteConnection connection = null)
+    {
+        bool shouldCloseConnection = false;
+        if (connection == null)
+        {
+            connection = new SqliteConnection("Data Source=" + dbPath);
+            connection.Open();
+            shouldCloseConnection = true;
+        }
+
+        using (var command = connection.CreateCommand())
+        {
+            command.CommandText = @"INSERT INTO DiaryData (BookID, CheckListLog, CheckListChecked, CheckListLog2, CheckListChecked2, Log, Rate, Rate2, Weather, Day, Date) 
+                                    VALUES (@BookID, @CheckListLog, @CheckListChecked, @CheckListLog2, @CheckListChecked2, @Log, @Rate, @Rate2, @Weather, @Day, @Date)";
+            command.Parameters.AddWithValue("@BookID", diaryData.BookID);
+            command.Parameters.AddWithValue("@CheckListLog", diaryData.CheckListLog);
+            command.Parameters.AddWithValue("@CheckListChecked", diaryData.CheckListChecked ? 1 : 0);
+            command.Parameters.AddWithValue("@CheckListLog2", diaryData.CheckListLog2);
+            command.Parameters.AddWithValue("@CheckListChecked2", diaryData.CheckListChecked2 ? 1 : 0);
+            command.Parameters.AddWithValue("@Log", diaryData.Log);
+            command.Parameters.AddWithValue("@Rate", diaryData.Rate);
+            command.Parameters.AddWithValue("@Rate2", diaryData.Rate2);
+            command.Parameters.AddWithValue("@Weather", diaryData.Weather.ToString());
+            command.Parameters.AddWithValue("@Day", diaryData.Day.ToString());
+            command.Parameters.AddWithValue("@Date", diaryData.Date);
+            command.ExecuteNonQuery();
+        }
+
+        if (shouldCloseConnection)
+        {
             connection.Close();
         }
     }
 
-    void LoadBookData()
+    public void LoadBookData()
     {
         bookDataList.Clear();
         using (var connection = new SqliteConnection("Data Source=" + dbPath))
