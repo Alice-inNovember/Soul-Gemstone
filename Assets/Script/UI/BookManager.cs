@@ -29,7 +29,7 @@ namespace Script.UI
         void Start()
         {
             EventManager.Instance.AddListener(EEventType.ScreenInterection, this);
-            var bookIDList = DatabaseManager.Instance.GetBookIDList();
+            //var bookIDList = DatabaseManager.Instance.GetBookIDList();
             //foreach (var bookID in bookIDList)
             //{
             //    CreateBook(DatabaseManager.Instance.GetBookData(bookID));
@@ -49,6 +49,7 @@ namespace Script.UI
             book.GetComponent<RectTransform>()
                 .DOAnchorPos(new Vector3(moveDistance * (bookTotalCnt - currentBookIndex), 0, 0), 0)
                 .OnComplete(() => SetBookFocus(bookTotalCnt - 1));
+            //book.GetComponent<Book>().Bookinit();
             //DatabaseManager.Instance.InsertBookData(Boo);
             bookTotalCnt++;
         }

@@ -43,7 +43,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Data-UI-Merge",
+    "git-widget-placeholder": "UI-Feature",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,7 +113,7 @@
       <workItem from="1721123873100" duration="5313000" />
       <workItem from="1721175515723" duration="9585000" />
       <workItem from="1721188676451" duration="29159000" />
-      <workItem from="1721224371009" duration="5618000" />
+      <workItem from="1721224371009" duration="13430000" />
     </task>
     <servers />
   </component>

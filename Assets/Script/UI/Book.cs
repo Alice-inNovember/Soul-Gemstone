@@ -24,6 +24,11 @@ namespace Script.UI
             bookID = id;
             dateText.text = date;
         }
+
+        public string GetDate()
+        {
+            return dateText.text;
+        }
     }
 }
 

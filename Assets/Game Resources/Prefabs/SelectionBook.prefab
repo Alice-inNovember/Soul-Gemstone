@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6583309086847382177}
   - component: {fileID: 2023683422737949103}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,8 +69,8 @@ MonoBehaviour:
 
     MM.DD ~ MM.DD'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c74512eac0c9bd3478383e4736d7b2b1, type: 2}
-  m_sharedMaterial: {fileID: 2300709497957352297, guid: c74512eac0c9bd3478383e4736d7b2b1,
+  m_fontAsset: {fileID: 11400000, guid: bd7393f0352a77e4f93cdecafa8312e3, type: 2}
+  m_sharedMaterial: {fileID: 2987354527914766287, guid: bd7393f0352a77e4f93cdecafa8312e3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -361,5 +361,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5121260203f9cf44195cf19f2c267750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bookid: 0
+  bookID: 0
   dateText: {fileID: 2023683422737949103}
