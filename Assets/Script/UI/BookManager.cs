@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using Script.SQLite;
@@ -10,13 +11,15 @@ namespace Script.UI
 {
     public class BookManager : MonoBehaviour, IEventListener
     {
-        [Header("Book Data")] [SerializeField] private List<Book> books;
+        [FormerlySerializedAs("books")]
+        [Header("Book Data")]
+        [SerializeField] public List<Book> bookDataList;
         
         [Header("Book Sprites")]
         [SerializeField] private Sprite[] bookSprites;
         [SerializeField] private int bookTotalCnt = 0;
         [Header("Book Creation")]
-        [SerializeField] private Canvas bookCanvas;
+        [SerializeField] private GameObject booksParent;
         [SerializeField] private GameObject bookPrefab;
     
         [Header("Book Movement")]
@@ -29,93 +32,49 @@ namespace Script.UI
         void Start()
         {
             EventManager.Instance.AddListener(EEventType.ScreenInterection, this);
-            //var bookIDList = DatabaseManager.Instance.GetBookIDList();
-            //foreach (var bookID in bookIDList)
-            //{
-            //    CreateBook(DatabaseManager.Instance.GetBookData(bookID));
-            //}
         }
 
-        public void OnPreparation()
-        {
-            UIManager.Instance.MovePreparation(true);
-        }
-    
         public void CreateBook()
         {
-            var book = Instantiate(bookPrefab, bookCanvas.transform);
+            var book = Instantiate(bookPrefab, booksParent.transform);
+            var bookData = new BookData();
+            
             book.GetComponent<Image>().sprite = bookSprites[bookTotalCnt % bookSprites.Length];
+            book.GetComponent<Book>().Data = bookData;
+            
+            SetBookFocus(bookTotalCnt - 1);
+            
             bookList.Add(book);
-            book.GetComponent<RectTransform>()
-                .DOAnchorPos(new Vector3(moveDistance * (bookTotalCnt - currentBookIndex), 0, 0), 0)
-                .OnComplete(() => SetBookFocus(bookTotalCnt - 1));
-            //book.GetComponent<Book>().Bookinit();
-            //DatabaseManager.Instance.InsertBookData(Boo);
+            bookDataList.Add(book.GetComponent<Book>());
+            
             bookTotalCnt++;
+            UIManager.Instance.diaryManager.SetDiaryInfo(bookData, bookData.DiaryDataList);
+            UIManager.Instance.diaryManager.SetDiaryFocus((int)DateTime.Today.DayOfWeek + 1);
         }
         
         private void CreateBook(BookData bookData)
         {
-            var book = Instantiate(bookPrefab, bookCanvas.transform);
+            var book = Instantiate(bookPrefab, booksParent.transform);
             book.GetComponent<Image>().sprite = bookSprites[bookTotalCnt % bookSprites.Length];
             bookList.Add(book);
-            
-            book.GetComponent<RectTransform>()
-                .DOAnchorPos(new Vector3(moveDistance * (bookTotalCnt - currentBookIndex), 0, 0), 0)
-                .OnComplete(() => SetBookFocus(bookTotalCnt - 1));
+            SetBookFocus(0);
             bookTotalCnt++;
         }
     
         public void OnBookInteraction(InputManager.EInteractionType type)
         {
-            if (GameManager.Instance.currentStatus != EPlayerStatus.Book)
+            if (UIManager.Instance.uiState != EuiState.BookShelf)
                 return;
-            if (GameManager.Instance.currentStatus == EPlayerStatus.Book)
+            if (type == InputManager.EInteractionType.LeftSwipe)
             {
-                if (type == InputManager.EInteractionType.LeftSwipe)
-                {
-                    SetBookFocus(currentBookIndex + 1);
-                }
-                else if (type == InputManager.EInteractionType.RightSwipe)
-                {
-                    SetBookFocus(currentBookIndex - 1);
-                }
-
-                InputManager.Instance.isSwiping = false;
+                SetBookFocus(currentBookIndex + 1);
             }
-        }
-    
-        private void HandleLeftSwipe()
-        {
-            //if (bookList.Count <= 1 || currentBookIndex >= bookList.Count - 1)
-            //    return;
-            //int targetIndex = currentBookIndex + 1;
-            //for (int i = 0; i < bookList.Count; i++)
-            //{
-            //    var bookTransform = bookList[i].GetComponent<RectTransform>();
-            //    bookTransform.DOPause();
-            //    bookTransform.DOAnchorPosX(_moveDistance * -(targetIndex - i), 0.5f).SetEase(Ease.InOutQuad);
-            //}
-            //bookList[currentBookIndex].transform.DOScale(sideScale, 0.5f).SetEase(Ease.InOutQuad);
-            //bookList[currentBookIndex + 1].transform.DOScale(centerScale, 0.5f).SetEase(Ease.InOutQuad);
-            //currentBookIndex++;
-        }
-
-        private void HandleRightSwipe()
-        {
-            //if (bookList.Count <= 1 || currentBookIndex <= 0)
-            //    return;
-            //int targetIndex = currentBookIndex - 1;
-            //for (int i = 0; i < bookList.Count; i++)
-            //{
-            //    var bookTransform = bookList[i].GetComponent<RectTransform>();
-            //    bookTransform.DOPause();
-            //    bookTransform.DOAnchorPosX(_moveDistance * -(targetIndex - i), 0.5f).SetEase(Ease.InOutQuad);
-            //}
-            //bookList[currentBookIndex].transform.DOScale(sideScale, 0.5f).SetEase(Ease.InOutQuad);
-            //bookList[currentBookIndex - 1].transform.DOScale(centerScale, 0.5f).SetEase(Ease.InOutQuad);
-            //currentBookIndex--;
-            SetBookFocus(currentBookIndex - 1);
+            else if (type == InputManager.EInteractionType.RightSwipe)
+            {
+                SetBookFocus(currentBookIndex - 1);
+            }
+            InputManager.Instance.isSwiping = false;
+            
         }
     
         public void SetBookFocus(int targetIndex)

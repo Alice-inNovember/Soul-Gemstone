@@ -1,3 +1,5 @@
+using System;
+using Script.SQLite;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,29 +8,37 @@ namespace Script.UI
 {
     public class Book : MonoBehaviour
     {
-        void Start()
+        [SerializeField] private TMP_Text datText;
+        public BookData Data
         {
-            GetComponent<Button>().onClick.AddListener(() =>
+            get => _data;
+            set
             {
-                UIManager.Instance.CreateDiary();
-            });
-        }
-    
-        public int bookID;
-
-        [SerializeField]
-        private TMP_Text dateText;
-    
-        public void Bookinit(int id, string date)
-        {
-            bookID = id;
-            dateText.text = date;
+                _data = value;
+                UpdateUI();
+            }
         }
 
-        public string GetDate()
+        private void Start()
         {
-            return dateText.text;
+            GetComponent<Button>().onClick.AddListener(OnButtonClick);
         }
+
+        private void OnButtonClick()
+        {
+            UIManager.Instance.SetUIState(EuiState.Diary);
+            UIManager.Instance.diaryManager.SetDiaryInfo(_data, _data.DiaryDataList);
+            UIManager.Instance.diaryManager.SetDiaryFocus(0);
+        }
+
+        private void UpdateUI()
+        {
+            var startingDay = DateTime.Parse(_data.StartingDay);
+            datText.text = startingDay.ToString("yyyy") + "\n" + startingDay.ToString("MMMM DD") + " ~ " + startingDay.ToString("MMMM DD");
+            UIManager.Instance.diaryManager.SetDiaryInfo(_data, _data.DiaryDataList);
+        }
+
+        private BookData _data;
     }
 }
 

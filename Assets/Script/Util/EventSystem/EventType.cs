@@ -4,6 +4,7 @@
 	{
 		none,
 		ScreenInterection,
+		UIStateChange,
 		DataLoad
 	}
 }

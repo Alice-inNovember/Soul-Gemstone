@@ -1,95 +1,73 @@
 using System;
 using System.Globalization;
 using DG.Tweening;
+using Script.SQLite;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
+using Util.EventSystem;
 using Util.SingletonSystem;
 
 namespace Script.UI
 {
+    public enum EuiState
+    {
+        BookShelf,
+        Diary,
+        TaskInput
+    }
     public class UIManager : MonoBehaviourSingleton<UIManager>
     {
+        public EuiState uiState = EuiState.BookShelf;
+        public const float AnimationTime = 0.5f;
         public DiaryManager diaryManager;
         public BookManager bookManager;
-        public GameObject preparation;
-        public GameObject createDiaryBtn;
-        public GameObject backBtn;
-        public GameObject saveBtn;
-    
-        private Vector3 openPos = new Vector3(0, 230f, 0);
-        private Vector3 closePos = new Vector3(0, -1600f, 0);
 
+        [SerializeField] private Button startEditButton;
+        [SerializeField] private Button taskInputFinishButton;
+        [SerializeField] private Button toBookShelfButton;
+        [SerializeField] private Button saveDiaryButton;
+        
         void Start()
         {
-            for (int i = 0; i < bookManager.bookList.Count; i++)
+            bookManager = GetComponent<BookManager>();
+            diaryManager = GetComponent<DiaryManager>();
+            SetUIState(EuiState.BookShelf);
+            startEditButton.onClick.AddListener(StartEdit);
+            taskInputFinishButton.onClick.AddListener(FinishTaskInput);
+            toBookShelfButton.onClick.AddListener(() => SetUIState(EuiState.BookShelf));
+            // saveDiaryButton.onClick.AddListener(() => diaryManager.SaveDiary());
+        }
+        
+        private void StartEdit()
+        {
+            foreach (var book in bookManager.bookDataList)
             {
-                if (bookManager.bookList[i].GetComponent<Book>().GetDate() == GetLastSunday().AddDays(i).ToString("yy-MM-dd"))
+                foreach (var diaryData in book.Data.DiaryDataList)
                 {
-                    createDiaryBtn.GetComponent<Button>().interactable = false;
+                    if (DateTime.Parse(diaryData.Date).ToString("yyyy MMMM dd") == DateTime.Today.ToString("yyyy MMMM dd"))
+                    {
+                        SetUIState(EuiState.Diary);
+                        diaryManager.SetDiaryInfo(book.Data, book.Data.DiaryDataList);
+                        diaryManager.SetDiaryFocus((int)DateTime.Today.DayOfWeek + 1);
+                        return;
+                    }
                 }
             }
-           
+            SetUIState(EuiState.TaskInput);
         }
         
-        public void MovePreparation(bool isOpen)
+        private void FinishTaskInput()
         {
-            if (isOpen)
-            {
-                preparation.SetActive(true);
-                preparation.GetComponent<RectTransform>().DOAnchorPos(openPos, 1f);
-            }
-            else
-            {
-                preparation.GetComponent<RectTransform>().DOAnchorPos(closePos, 1f).onComplete += () =>
-                {
-                    preparation.SetActive(false);
-                    bookManager.CreateBook();
-                };
-            }
+            SetUIState(EuiState.Diary);
+            bookManager.CreateBook();
         }
         
-        public DateTime GetLastSunday()
+        public void SetUIState(EuiState state)
         {
-            DateTime today = DateTime.Today;
-            int daysSinceSunday = (int)today.DayOfWeek % 7;
-            DateTime lastSunday = today.AddDays(-daysSinceSunday);
-            return lastSunday;
+            uiState = state;
+            EventManager.Instance.PostNotification(EEventType.UIStateChange, this, state);
         }
 
-        public void CreateDiary()
-        {
-            diaryManager.CreateDiary();
-            createDiaryBtn.SetActive(false);
-            foreach (var book in bookManager.bookList)
-            {
-                book.SetActive(false);
-            }
-            foreach (var diary in diaryManager.diaryArray)
-            {
-                diary.SetActive(true);
-            }
-            diaryManager.diaryArray[0].GetComponent<RectTransform>().DOAnchorPos(new Vector3(0f,0f,0f), 1f);
-            backBtn.SetActive(true);
-            saveBtn.SetActive(true);
-            GameManager.Instance.currentStatus = EPlayerStatus.Diary;
-        }
-        
-        public void BackToBook()
-        {
-            foreach (var book in bookManager.bookList)
-            {
-                book.SetActive(true);
-            }
-            foreach (var diary in diaryManager.diaryArray)
-            {
-                diary.SetActive(false);
-            }
-            diaryManager.SetDiaryFocus(0);
-            diaryManager.diaryArray[0].GetComponent<RectTransform>().DOAnchorPos(new Vector3(0f,-1800f,0f), 0f);
-            createDiaryBtn.SetActive(true);
-            backBtn.SetActive(false);
-            saveBtn.SetActive(false);
-            GameManager.Instance.currentStatus = EPlayerStatus.Book;
-        }
     }
 }

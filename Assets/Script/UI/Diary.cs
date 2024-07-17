@@ -8,7 +8,7 @@ namespace Script.UI
     public class Diary : MonoBehaviour
     {
         [Header("Diary Information")]
-        [SerializeField] private EDays days;
+        [SerializeField] public EDays days;
         [SerializeField] private TMP_Text dateText;
         [SerializeField] private TMP_InputField diaryText;
         [SerializeField] private EWeather weather;
@@ -18,19 +18,17 @@ namespace Script.UI
         [SerializeField] private bool isCheck2;
         [SerializeField] private Slider evaluation1;
         [SerializeField] private Slider evaluation2;
-        
-        
 
-        public void SetDiary(string date, string diary, string checkList1, string checkList2, bool check1, bool check2, int eval1, int eval2)
+        public void SetDiary(DiaryData diaryData)
         {
-            dateText.text = date;
-            diaryText.text = diary;
-            checkListText1.text = checkList1;
-            checkListText2.text = checkList2;
-            isCheck1 = check1;
-            isCheck2 = check2;
-            evaluation1.value = eval1;
-            evaluation2.value = eval2;
+            dateText.text = diaryData.Date;
+            diaryText.text = diaryData.Context;
+            checkListText1.text = diaryData.TargetBook.TaskA;
+            checkListText2.text = diaryData.TargetBook.TaskB;
+            isCheck1 = diaryData.IsTaskADone;
+            isCheck2 =  diaryData.IsTaskBDone;
+            evaluation1.value = diaryData.RateA;
+            evaluation2.value =  diaryData.RateA;
         }
     }
 }

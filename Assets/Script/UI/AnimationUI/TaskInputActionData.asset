@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7d2c16f40c4bdfb00d62ab819c06d7, type: 3}
+  m_Name: TaskInputActionData
+  m_EditorClassIdentifier: 
+  initalState: 1
+  doChangeActive: 1
+  doChangeTransform: 1
+  showPosition: {x: 0, y: 0}
+  showSize: {x: 420, y: 480}
+  showScale: {x: 2, y: 2, z: 1}
+  hidePosition: {x: 0, y: -1600}
+  hideSize: {x: 420, y: 480}
+  hideScale: {x: 2, y: 2, z: 1}
+  uiStateActions:
+  - uiState: 2
+    visualState: 0

@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace Script.UI
 {
-    public class Summary : MonoBehaviour
+    public class DiaryInfo : MonoBehaviour
     {
         [SerializeField] private TMP_Text dateText;
         [SerializeField] private TMP_Text summaryWeekText;
     
-        public void SetSummary(string date, string summaryWeek)
+        public void SetInfo(string datePeriod, string summaryWeek)
         {
-            dateText.text = date;
+            dateText.text = datePeriod;
             summaryWeekText.text = summaryWeek;
         }
     }

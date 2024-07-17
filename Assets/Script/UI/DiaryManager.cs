@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
+using Script.SQLite;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Util.EventSystem;
 
 namespace Script.UI
@@ -18,12 +21,11 @@ namespace Script.UI
         private void Start()
         {
             EventManager.Instance.AddListener(EEventType.ScreenInterection, this);
-            SetDiaryFocus(0);
         }
 
         private void OnDiaryInteraction(InputManager.EInteractionType type)
         {
-            if (GameManager.Instance.currentStatus != EPlayerStatus.Diary)
+            if (UIManager.Instance.uiState != EuiState.Diary)
                 return;
             if (type == InputManager.EInteractionType.LeftSwipe)
             {
@@ -49,37 +51,21 @@ namespace Script.UI
                 return;
             for (int i = 0; i < diaryArray.Length; i++)
             {
-                var DiaryTransform = diaryArray[i].GetComponent<RectTransform>();
-                DiaryTransform.DOPause();
-                DiaryTransform.DOAnchorPosX(1200 * -(targetIndex - i), 0.5f);
+                var diaryTransform = diaryArray[i].GetComponent<RectTransform>();
+                diaryTransform.DOPause();
+                diaryTransform.DOAnchorPosX(1200 * -(targetIndex - i), 0.5f);
             }
-
             currentDiaryIndex = targetIndex;
         }
 
-        public void SetCheck1(TMP_InputField check)
+        public void SetDiaryInfo(BookData bookData, List<DiaryData> diaryDatas)
         {
-            checkText1 = check.text;
-        }
-    
-        public void SetCheck2(TMP_InputField check)
-        {
-            checkText2 = check.text;
-            UIManager.Instance.MovePreparation(false);
-        }
-    
-        
-    
-        public void CreateDiary()
-        {
-            var dateTime = UIManager.Instance.GetLastSunday().ToString("yy-MM-dd");
-            var fullDateTime = UIManager.Instance.GetLastSunday().ToString("yy-MM-dd") + " ~ " +
-                               UIManager.Instance.GetLastSunday().AddDays(6).ToString("yy-MM-dd");
-            diaryArray[0].GetComponent<Summary>().SetSummary(fullDateTime, "");
-            for (var i = 1; i < diaryArray.Length; i++)
+            var startingDay = DateTime.Parse(bookData.StartingDay);
+            var fullDateTime = startingDay.ToString("yyyy") + " " + startingDay.ToString("MMMM dd") + " ~ " + startingDay.AddDays(6).ToString("MMMM dd");
+            diaryArray[0].GetComponent<DiaryInfo>().SetInfo(fullDateTime, "Test Summary");
+            foreach (var diary in diaryList)
             {
-                diaryArray[i].GetComponent<Diary>().SetDiary(dateTime, "", checkText1, checkText2, false, false, 1, 1);
-                dateTime = UIManager.Instance.GetLastSunday().AddDays(i).ToString("yy-MM-dd");
+                diary.SetDiary(diaryDatas.Find(data => data.DayType == diary.days));
             }
         }
     }
