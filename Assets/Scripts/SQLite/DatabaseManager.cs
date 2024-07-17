@@ -42,6 +42,7 @@ public class DatabaseManager : MonoBehaviour
                                         IsCompleted INTEGER,
                                         Seed INTEGER,
                                         CheckListComp TEXT,
+                                        CheckListComp2 TEXT,
                                         WeekSum TEXT)";
                 command.ExecuteNonQuery();
             }
@@ -95,12 +96,12 @@ public class DatabaseManager : MonoBehaviour
 
     void InsertSampleData()
     {
-        BookData book1 = new BookData("Week 1", true, 42, "Completed all tasks", "Great week overall", 1);
+        BookData book1 = new BookData("Week 1", true, 42, "Completed all tasks", "Do Great","Great week overall", 1);
         book1._diaryDatas.Add(new DiaryData(1, "Task1", true, "Task2", false, "Had a good day", 5, 4, EWeather.Sunny, EDays.Monday, DateTime.Now));
         book1._diaryDatas.Add(new DiaryData(1, "Task3", false, "Task4", true, "It was raining", 3, 2, EWeather.Rainy, EDays.Tuesday, DateTime.Now));
         InsertBookData(book1);
 
-        BookData book2 = new BookData("Week 2", false, 24, "Some tasks left", "Average week", 2);
+        BookData book2 = new BookData("Week 2", false, 24, "Some tasks left", "Do Somthing","Average week", 2);
         book2._diaryDatas.Add(new DiaryData(2, "Task1", true, "Task2", true, "Worked hard", 4, 3, EWeather.Cloudy, EDays.Wednesday, DateTime.Now));
         book2._diaryDatas.Add(new DiaryData(2, "Task3", true, "Task4", false, "Relaxed", 5, 4, EWeather.Sunny, EDays.Thursday, DateTime.Now));
         InsertBookData(book2);
@@ -115,12 +116,13 @@ public class DatabaseManager : MonoBehaviour
             connection.Open();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = @"INSERT INTO BookData (Period, IsCompleted, Seed, CheckListComp, WeekSum, BookID) 
-                                        VALUES (@Period, @IsCompleted, @Seed, @CheckListComp, @WeekSum, @BookID)";
+                command.CommandText = @"INSERT INTO BookData (Period, IsCompleted, Seed, CheckListComp, CheckListComp2, WeekSum, BookID) 
+                                        VALUES (@Period, @IsCompleted, @Seed, @CheckListComp, @CheckListComp2, @WeekSum, @BookID)";
                 command.Parameters.AddWithValue("@Period", bookData._period);
                 command.Parameters.AddWithValue("@IsCompleted", bookData._isCompleted ? 1 : 0);
                 command.Parameters.AddWithValue("@Seed", bookData._seed);
                 command.Parameters.AddWithValue("@CheckListComp", bookData._checkListComp);
+                command.Parameters.AddWithValue("@CheckListComp2", bookData._checkListComp2);
                 command.Parameters.AddWithValue("@WeekSum", bookData._weekSum);
                 command.Parameters.AddWithValue("@BookID", bookData._bookID);
                 command.ExecuteNonQuery();
@@ -187,6 +189,7 @@ public class DatabaseManager : MonoBehaviour
                             reader["IsCompleted"].ToString() == "1",
                             Convert.ToInt32(reader["Seed"]),
                             reader["CheckListComp"].ToString(),
+                            reader["CheckListComp2"].ToString(),
                             reader["WeekSum"].ToString(),
                             bookID);
                         

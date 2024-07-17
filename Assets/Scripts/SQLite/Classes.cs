@@ -6,23 +6,26 @@ public enum EDays { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturd
 
 public class BookData
 {
-    public string _period { get; private set; }
-    public bool _isCompleted { get; private set; }
-    public int _seed { get; private set; }
+    public string _period { get; private set; } //일기 기간
+    public bool _isCompleted { get; private set; } //작성 완료 여부
+    public int _seed { get; private set; } //보석 시드
 
-    public List<DiaryData> _diaryDatas { get; private set; }
+    public List<DiaryData> _diaryDatas { get; private set; } //BookData에 해당하는 DiaryDate 리스트
 
-    public string _checkListComp { get; private set; }
-    public string _weekSum { get; private set; }
-    public int _bookID { get; private set; }
+    public string _checkListComp { get; private set; } // 목표 달성
 
-    public BookData(string mPeriod, bool mIsCompleted, int mSeed, string mCheckListComp, string mWeekSum, int mBookID)
+    public string _checkListComp2 { get; private set; } // 목표 달성 2
+    public string _weekSum { get; private set; } // 1주일 요약
+    public int _bookID { get; private set; } // BookID
+
+    public BookData(string mPeriod, bool mIsCompleted, int mSeed, string mCheckListComp,string mCheckListComp2, string mWeekSum, int mBookID)
     {
         _diaryDatas = new List<DiaryData>();
         _period = mPeriod;
         _isCompleted = mIsCompleted;
         _seed = mSeed;
         _checkListComp = mCheckListComp;
+        _checkListComp2 = mCheckListComp2;
         _weekSum = mWeekSum;
         _bookID = mBookID;
     }
