@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EventType = Util.EventSystem.EventType;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else if (_instance != this)
         {
@@ -48,5 +49,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         currentStatus = PlayerStatus.Book;
+        InputManager.Instance.eventType = EventType.ScreenInterection;
     }
 }

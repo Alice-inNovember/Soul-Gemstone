@@ -3,7 +3,6 @@
 	public enum EventType
 	{
 		none,
-		DirayInterection,
-		BookInterection
+		ScreenInterection
 	}
 }

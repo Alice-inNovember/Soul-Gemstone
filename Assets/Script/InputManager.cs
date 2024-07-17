@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
     
     public float swipeDistance;
     public bool isSwiping = false;
+    public EventType eventType;
 
     public enum InteractionType
     { 
@@ -68,16 +69,17 @@ public class InputManager : MonoBehaviour
                 swipeDistance = (endPos - startPos).magnitude;
                 if (swipeDistance > 100)
                 {
+                    
                     if (Mathf.Abs(endPos.x - startPos.x) > Mathf.Abs(endPos.y - startPos.y))
                     {
                         if (endPos.x > startPos.x)
                         {
-                            EventManager.Instance.PostNotification(EventType.DirayInterection, this, InteractionType.RightSwipe);
+                            EventManager.Instance.PostNotification(EventType.ScreenInterection, this, InteractionType.RightSwipe);
                             Debug.Log("Right Swipe");
                         }
                         else
                         {
-                            EventManager.Instance.PostNotification(EventType.DirayInterection, this, InteractionType.LeftSwipe);
+                            EventManager.Instance.PostNotification(EventType.ScreenInterection, this, InteractionType.LeftSwipe);
                             Debug.Log("Left Swipe");
                         }
                     }
@@ -102,12 +104,12 @@ public class InputManager : MonoBehaviour
                 {
                     if (endPos.x > startPos.x)
                     {
-                        EventManager.Instance.PostNotification(EventType.DirayInterection, this, InteractionType.RightSwipe);
+                        EventManager.Instance.PostNotification(EventType.ScreenInterection, this, InteractionType.RightSwipe);
                         //Debug.Log("Right Swipe");
                     }
                     else
                     {
-                        EventManager.Instance.PostNotification(EventType.DirayInterection, this, InteractionType.LeftSwipe);
+                        EventManager.Instance.PostNotification(EventType.ScreenInterection, this, InteractionType.LeftSwipe);
                         //Debug.Log("Left Swipe");
                     }
                 }
