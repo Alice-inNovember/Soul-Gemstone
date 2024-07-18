@@ -22,11 +22,10 @@ namespace Script.UI
         public const float AnimationTime = 0.5f;
         public DiaryManager diaryManager;
         public BookManager bookManager;
-
         [SerializeField] private Button startEditButton;
         [SerializeField] private Button taskInputFinishButton;
         [SerializeField] private Button toBookShelfButton;
-        [SerializeField] private Button saveDiaryButton;
+        [SerializeField] private Button saveButton;
         
         void Start()
         {
@@ -36,12 +35,13 @@ namespace Script.UI
             startEditButton.onClick.AddListener(StartEdit);
             taskInputFinishButton.onClick.AddListener(FinishTaskInput);
             toBookShelfButton.onClick.AddListener(() => SetUIState(EuiState.BookShelf));
-            // saveDiaryButton.onClick.AddListener(() => diaryManager.SaveDiary());
+            saveButton.onClick.AddListener(Save);
+            bookManager.Load();
         }
         
         private void StartEdit()
         {
-            foreach (var book in bookManager.bookDataList)
+            foreach (var book in bookManager.bookList)
             {
                 foreach (var diaryData in book.Data.DiaryDataList)
                 {
@@ -62,12 +62,18 @@ namespace Script.UI
             SetUIState(EuiState.Diary);
             bookManager.CreateBook();
         }
+
+        private void Save()
+        {
+            Debug.Log("Save Button Clicked");
+            bookManager.Save();
+        }
+        
         
         public void SetUIState(EuiState state)
         {
             uiState = state;
             EventManager.Instance.PostNotification(EEventType.UIStateChange, this, state);
         }
-
     }
 }

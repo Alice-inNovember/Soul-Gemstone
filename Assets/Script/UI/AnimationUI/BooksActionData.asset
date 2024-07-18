@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initalState: 0
   doChangeActive: 1
-  doChangeTransform: 0
+  doChangeTransform: 1
   showPosition: {x: 0, y: 0}
   showSize: {x: 0, y: 0}
-  showScale: {x: 0, y: 0, z: 0}
-  hidePosition: {x: 0, y: 0}
+  showScale: {x: 1, y: 1, z: 1}
+  hidePosition: {x: 0, y: -1600}
   hideSize: {x: 0, y: 0}
-  hideScale: {x: 0, y: 0, z: 0}
+  hideScale: {x: 1, y: 1, z: 0}
   uiStateActions:
   - uiState: 0
     visualState: 0
