@@ -1,20 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
-using UnityEngine.Rendering.Universal;
 
 namespace Script.SQLite
 {
 	public class BookData
 	{
 		public string BookGUID;
-		public string TaskA;
-		public string TaskB;
 		public List<DiaryData> DiaryDataList;
 		public int GemSeed;
 		public bool IsCompleted;
 		public string StartingDay;
+		public string TaskA;
+		public string TaskB;
 		public string WeeklySummary;
 
 		public BookData(string bookGuid, string startingDay, bool isCompleted, int gemSeed,
@@ -37,10 +35,7 @@ namespace Script.SQLite
 			IsCompleted = false;
 			GemSeed = -1;
 			DiaryDataList = new List<DiaryData>();
-			for (int i = 0; i < 7; i++)
-			{
-				DiaryDataList.Add(new DiaryData(this, (EDays)i));
-			}
+			for (var i = 0; i < 7; i++) DiaryDataList.Add(new DiaryData(this, (EDays)i));
 			TaskA = "";
 			TaskB = "";
 			WeeklySummary = "";
@@ -54,16 +49,18 @@ namespace Script.SQLite
 
 	public class DiaryData
 	{
-		public BookData TargetBook;
+		public string Context; //내용
+		public string Date; // 날짜
+		public EDays DayType;
 		public bool IsTaskADone;
 		public bool IsTaskBDone;
-		public string Context; //내용
-		public int RateA;  // 하루 평점A
-		public int RateB;// 하루 평점B
+		public int RateA; // 하루 평점A
+		public int RateB; // 하루 평점B
+		public BookData TargetBook;
 		public EWeather Weather; // 날씨
-		public EDays DayType;
-		public string Date; // 날짜
-		public DiaryData(BookData targetBook, bool isTaskADone, bool isTaskBDone, string context, int rateA, int rateB, EWeather weather, string date)
+
+		public DiaryData(BookData targetBook, bool isTaskADone, bool isTaskBDone, string context, int rateA, int rateB,
+			EWeather weather, string date)
 		{
 			TargetBook = targetBook;
 			IsTaskADone = isTaskADone;
@@ -75,6 +72,7 @@ namespace Script.SQLite
 			DayType = (EDays)DateTime.Parse(date).DayOfWeek;
 			Date = date;
 		}
+
 		public DiaryData(BookData targetBook, EDays dayType)
 		{
 			TargetBook = targetBook;
@@ -90,7 +88,6 @@ namespace Script.SQLite
 
 		private DiaryData()
 		{
-			 
 		}
 	}
 

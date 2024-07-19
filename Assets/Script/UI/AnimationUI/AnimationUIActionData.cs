@@ -5,14 +5,14 @@ using UnityEngine;
 
 namespace Script.UI.AnimationUI
 {
-	[CreateAssetMenu(fileName = "AnimationUIActionData", menuName = "Scriptable Object/AnimationUI Action Data", order = int.MaxValue)]
+	[CreateAssetMenu(fileName = "AnimationUIActionData", menuName = "Scriptable Object/AnimationUI Action Data",
+		order = int.MaxValue)]
 	public class AnimationUIActionData : ScriptableObject
 	{
-		[Header("UI Transform")]
-		public UIVisualState initalState;
-		
-		[Header("UI Transform")]
-		public bool doChangeActive;
+		[Header("UI Transform")] public UIVisualState initalState;
+
+		[Header("UI Transform")] public bool doChangeActive;
+
 		public bool doChangeTransform;
 		public Vector2 showPosition;
 		public Vector2 showSize;
@@ -21,8 +21,7 @@ namespace Script.UI.AnimationUI
 		public Vector2 hideSize;
 		public Vector3 hideScale;
 
-		[Header("UI StateAction")] 
-		public List<StateAction> uiStateActions;
+		[Header("UI StateAction")] public List<StateAction> uiStateActions;
 
 		public UIVisualState GetUIVisualState(EuiState uiState)
 		{

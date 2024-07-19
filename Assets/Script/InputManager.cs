@@ -1,108 +1,45 @@
 using UnityEngine;
 using Util.EventSystem;
+using Util.SingletonSystem;
 
 namespace Script
 {
-    public class InputManager : MonoBehaviour
-    {
-        public enum EInteractionType
-        {
-            LeftSwipe,
-            RightSwipe,
-            LeftTap,
-            RightTap
-        }
+	public class InputManager : MonoBehaviourSingleton<InputManager>
+	{
+		private Vector3 _startPos;
 
-        private static InputManager _instance;
+		private void Update()
+		{
+			MouseInput();
+		}
 
-        public float swipeDistance;
-        public bool isSwiping;
-        public EEventType eventType;
-        private Vector3 endPos;
-        private Vector3 startPos;
+		private void MouseInput()
+		{
+			var mousePos = Input.mousePosition;
 
-        public static InputManager Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = FindObjectOfType<InputManager>();
-                    if (_instance == null)
-                    {
-                        var singletonObject = new GameObject();
-                        _instance = singletonObject.AddComponent<InputManager>();
-                    }
-                    //DontDestroyOnLoad(_instance.gameObject);
-                }
+			//마우스 클릭시 시작 포지션 초기화
+			if (Input.GetMouseButtonDown(0))
+				_startPos = mousePos;
 
-                return _instance;
-            }
-        }
+			//이동거리
+			var movedDistance = (mousePos - _startPos).magnitude;
 
-        private void Awake()
-        {
-            if (_instance == null)
-                _instance = this;
-            //DontDestroyOnLoad(gameObject);
-            else if (_instance != this) Destroy(gameObject);
-        }
+			//마우스 버튼 업 X || 이동거리가 100 미만 || x보다 y의 움직임이 크면 리턴
+			if (!Input.GetMouseButtonUp(0) || movedDistance < 100 ||
+			    Mathf.Abs(mousePos.x - _startPos.x) < Mathf.Abs(mousePos.y - _startPos.y))
+				return;
 
-        private void Update()
-        {
-            MouseInput();
-        }
+			//마우스 버튼 업, 이동거리가 100 이상, x의 움직임이 y보다 크면 인터렉션 호출
+			var interactionType = mousePos.x > _startPos.x
+				? EInteractionType.RightSwipe
+				: EInteractionType.LeftSwipe;
+			EventManager.Instance.PostNotification(EEventType.ScreenInteraction, this, interactionType);
+		}
+	}
 
-        private void TouchInput()
-        {
-            if (Input.touchCount > 0)
-            {
-                if (Input.GetTouch(0).phase == TouchPhase.Began) startPos = Input.GetTouch(0).position;
-
-                if (Input.GetTouch(0).phase == TouchPhase.Ended)
-                {
-                    endPos = Input.GetTouch(0).position;
-                    swipeDistance = (endPos - startPos).magnitude;
-                    if (swipeDistance > 100)
-                        if (Mathf.Abs(endPos.x - startPos.x) > Mathf.Abs(endPos.y - startPos.y))
-                        {
-                            if (endPos.x > startPos.x)
-                            {
-                                EventManager.Instance.PostNotification(EEventType.ScreenInterection, this,
-                                    EInteractionType.RightSwipe);
-                                Debug.Log("Right Swipe");
-                            }
-                            else
-                            {
-                                EventManager.Instance.PostNotification(EEventType.ScreenInterection, this,
-                                    EInteractionType.LeftSwipe);
-                                Debug.Log("Left Swipe");
-                            }
-                        }
-                }
-            }
-        }
-
-        private void MouseInput()
-        {
-            if (Input.GetMouseButtonDown(0)) startPos = Input.mousePosition;
-            if (Input.GetMouseButtonUp(0))
-            {
-                endPos = Input.mousePosition;
-                swipeDistance = (endPos - startPos).magnitude;
-                if (swipeDistance > 100)
-                    if (Mathf.Abs(endPos.x - startPos.x) > Mathf.Abs(endPos.y - startPos.y))
-                    {
-                        if (endPos.x > startPos.x)
-                            EventManager.Instance.PostNotification(EEventType.ScreenInterection, this,
-                                EInteractionType.RightSwipe);
-                        //Debug.Log("Right Swipe");
-                        else
-                            EventManager.Instance.PostNotification(EEventType.ScreenInterection, this,
-                                EInteractionType.LeftSwipe);
-                        //Debug.Log("Left Swipe");
-                    }
-            }
-        }
-    }
+	public enum EInteractionType
+	{
+		LeftSwipe,
+		RightSwipe
+	}
 }

@@ -2,9 +2,10 @@
 {
 	public enum EEventType
 	{
-		none,
-		ScreenInterection,
+		None,
+		ScreenInteraction,
 		UIStateChange,
+		DataSave,
 		DataLoad
 	}
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Script
 {
-    public class Gemstone : MonoBehaviour
-    {
-    }
+	public class Gemstone : MonoBehaviour
+	{
+	}
 }

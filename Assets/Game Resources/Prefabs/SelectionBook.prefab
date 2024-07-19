@@ -65,9 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'YYYY
-
-    MM.DD ~ MM.DD'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd7393f0352a77e4f93cdecafa8312e3, type: 2}
   m_sharedMaterial: {fileID: 2987354527914766287, guid: bd7393f0352a77e4f93cdecafa8312e3,
@@ -361,4 +359,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5121260203f9cf44195cf19f2c267750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  datText: {fileID: 2023683422737949103}
+  dateText: {fileID: 2023683422737949103}

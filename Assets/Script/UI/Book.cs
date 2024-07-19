@@ -6,39 +6,30 @@ using UnityEngine.UI;
 
 namespace Script.UI
 {
-    public class Book : MonoBehaviour
-    {
-        [SerializeField] private TMP_Text datText;
-        public BookData Data
-        {
-            get => _data;
-            set
-            {
-                _data = value;
-                UpdateUI();
-            }
-        }
+	public class Book : MonoBehaviour
+	{
+		[SerializeField] private TMP_Text dateText;
 
-        private void Start()
-        {
-            GetComponent<Button>().onClick.AddListener(OnButtonClick);
-        }
+		public BookData Data;
 
-        private void OnButtonClick()
-        {
-            UIManager.Instance.SetUIState(EuiState.Diary);
-            UIManager.Instance.diaryManager.SetDiaryInfo(_data, _data.DiaryDataList);
-            UIManager.Instance.diaryManager.SetDiaryFocus(0);
-        }
+		private void Start()
+		{
+			GetComponent<Button>().onClick.AddListener(OnButtonClick);
+			UpdateUI();
+		}
 
-        private void UpdateUI()
-        {
-            var startingDay = DateTime.Parse(_data.StartingDay);
-            datText.text = startingDay.ToString("yyyy") + "\n" + startingDay.ToString("MMMM DD") + " ~ " + startingDay.ToString("MMMM DD");
-            UIManager.Instance.diaryManager.SetDiaryInfo(_data, _data.DiaryDataList);
-        }
+		private void OnButtonClick()
+		{
+			UIManager.Instance.SetUIState(EuiState.Diary);
+			UIManager.Instance.diaryManager.SetDiaryInfo(Data, Data.DiaryDataList);
+			UIManager.Instance.diaryManager.SetDiaryFocus(0);
+		}
 
-        private BookData _data;
-    }
+		public void UpdateUI()
+		{
+			var startingDay = DateTime.Parse(Data.StartingDay);
+			dateText.text = startingDay.ToString("yyyy MMMM dd") + "\n" + startingDay.AddDays(6).ToString("yyyy MMMM dd");
+			UIManager.Instance.diaryManager.SetDiaryInfo(Data, Data.DiaryDataList);
+		}
+	}
 }
-
