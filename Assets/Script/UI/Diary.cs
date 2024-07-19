@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Script.Gem;
 using Script.SQLite;
 using TMPro;
 using UnityEngine;
@@ -83,6 +84,7 @@ namespace Script.UI
 			_diaryData = diaryData;
 			dateText.text = diaryData.Date;
 			diaryText.text = diaryData.Context;
+			
 			switch (diaryData.Weather)
 			{
 				case EWeather.Sunny:

@@ -19,11 +19,14 @@ namespace Script.Gem
             transform.DORotate(new Vector3(0.5f, 1.0f, 1.5f), 0.1f).SetLoops(-1, LoopType.Incremental);
         }
 
-        public void Create()
+        public void Create(int creationSeed)
         {
-            if (random)
-                seed = Random.Range(0, int.MaxValue);
-            Random.InitState(seed);
+            seed = creationSeed;
+            if (seed == -1)
+            {
+                Destroy(shape);
+                return;
+            }
             if (shape)
                 Destroy(shape);
             shape = Instantiate(shapeListData.shapeList[Random.Range(0, shapeListData.shapeList.Count)], transform);

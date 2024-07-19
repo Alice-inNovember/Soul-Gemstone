@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using Script.Gem;
 using Script.SQLite;
 using UnityEngine;
 using Util.EventSystem;
@@ -12,6 +13,7 @@ namespace Script.UI
 		[SerializeField] private Diary[] diaryList;
 		public GameObject[] diaryArray;
 		[SerializeField] private int currentDiaryIndex;
+		[SerializeField] private UniqueGem _uniqueGem;
 
 		private void Start()
 		{
@@ -57,6 +59,7 @@ namespace Script.UI
 
 		public void SetDiaryInfo(BookData bookData, List<DiaryData> diaryDataList)
 		{
+			_uniqueGem.Create(bookData.GemSeed);
 			var startingDay = DateTime.Parse(bookData.StartingDay);
 			var fullDateTime = startingDay.ToString("yyyy") + " " + startingDay.ToString("MMMM dd") + " ~ " +
 			                   startingDay.AddDays(6).ToString("MMMM dd");

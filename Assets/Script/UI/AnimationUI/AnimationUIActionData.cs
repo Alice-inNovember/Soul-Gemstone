@@ -7,7 +7,7 @@ namespace Script.UI.AnimationUI
 {
 	[CreateAssetMenu(fileName = "AnimationUIActionData", menuName = "Scriptable Object/AnimationUI Action Data",
 		order = int.MaxValue)]
-	public class AnimationUIActionData : ScriptableObject
+	public class AnimationUIActionData : UnityEngine.ScriptableObject
 	{
 		[Header("UI Transform")] public UIVisualState initalState;
 
