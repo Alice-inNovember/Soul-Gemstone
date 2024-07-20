@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Script.Gem;
 using Script.SQLite;
 using TMPro;
@@ -26,8 +27,8 @@ namespace Script.UI
 		[SerializeField] private TMP_Text checkListText2;
 		[SerializeField] private Toggle isCheck1;
 		[SerializeField] private Toggle isCheck2;
-		[SerializeField] private Slider evaluation1;
-		[SerializeField] private Slider evaluation2;
+		[SerializeField] private List<Button> evaluationA;
+		[SerializeField] private List<Button> evaluationB;
 
 		private DiaryData _diaryData;
 		private DateTime _thisDateTime;
@@ -70,18 +71,6 @@ namespace Script.UI
                 					return;
                 				_diaryData.IsTaskBDone = value;
                 			});
-                			evaluation1.onValueChanged.AddListener(value =>
-			                {
-                				if (_diaryData == null)
-                					return;
-                				_diaryData.RateA = (int)value;
-                			});
-                			evaluation2.onValueChanged.AddListener(value =>
-                			{
-                				if (_diaryData == null)
-                					return;
-                				_diaryData.RateB = (int)value;
-                			});
 			}
 			else
 			{
@@ -91,10 +80,31 @@ namespace Script.UI
 				diaryText.interactable = false;
 				isCheck1.interactable = false;
 				isCheck2.interactable = false;
-				evaluation1.interactable = false;
-				evaluation2.interactable = false;
+				foreach (var button in evaluationA)
+				{
+					button.interactable = false;
+				}
+				foreach (var button in evaluationB)
+				{
+					button.interactable = false;
+				}
 			}
-			
+		}
+
+		public void SetEvalA(int score)
+		{
+			_diaryData.RateA = score;
+			foreach (var rateA in evaluationA)
+				rateA.GetComponent<Image>().color = Color.white;
+			evaluationA[_diaryData.RateA].GetComponent<Image>().color = Color.cyan;
+		}
+		
+		public void SetEvalB(int score)
+		{
+			_diaryData.RateB = score;
+			foreach (var rateB in evaluationB)
+				rateB.GetComponent<Image>().color = Color.white;
+			evaluationB[_diaryData.RateB].GetComponent<Image>().color = Color.cyan;
 		}
 		
 		public void SetDiary(DiaryData diaryData)
@@ -122,10 +132,12 @@ namespace Script.UI
 			checkListText2.text = diaryData.TargetBook.TaskB;
 			isCheck1.isOn = diaryData.IsTaskADone;
 			isCheck2.isOn = diaryData.IsTaskBDone;
-			evaluation1.value = diaryData.RateA;
-			evaluation2.value = diaryData.RateA;
+			foreach (var rateA in evaluationA)
+				rateA.GetComponent<Image>().color = Color.white;
+			evaluationA[diaryData.RateA].GetComponent<Image>().color = Color.cyan;
+			foreach (var rateB in evaluationB)
+				rateB.GetComponent<Image>().color = Color.white;
+			evaluationB[diaryData.RateB].GetComponent<Image>().color = Color.cyan;
 		}
-
-		
 	}
 }
