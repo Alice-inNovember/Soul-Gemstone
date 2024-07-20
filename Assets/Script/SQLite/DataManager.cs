@@ -1,7 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using Mono.Data.Sqlite;
+using Script.Gem;
 using UnityEngine;
 using Util.EventSystem;
 using Util.SingletonSystem;
@@ -328,6 +332,71 @@ namespace Script.SQLite
 			command.ExecuteNonQuery();
 			connection.Close();
 			Debug.Log("Diary data deleted.");
+		}
+
+		public void IsCompletedCheck(BookData bookData)
+		{
+			var isWritten = 0;
+			if (!bookData.IsCompleted)
+			{
+				foreach (var diaryData in bookData.DiaryDataList)
+				{
+					if (diaryData.Context != "")
+					{
+						isWritten += 1;
+					}
+				}
+
+				if (isWritten == 7 && !bookData.IsCompleted)
+				{
+					bookData.IsCompleted = true;
+					UpdateGemSeed(bookData);
+				}
+			}
+		}
+
+		public void UpdateGemSeed(BookData bookData)
+		{
+			if (bookData.IsCompleted)
+			{
+				bookData.GemSeed = GenerateGemSeed(bookData);
+				using var connection = new SqliteConnection("Data Source=" + _dbPath);
+				connection.Open();
+
+				string query = @"UPDATE Books SET GemSeed = @GemSeed WHERE BookGUID = @BookGUID";
+
+				using (var command = new SqliteCommand(query, connection))
+				{
+					command.Parameters.AddWithValue("GemSeed", bookData.GemSeed);
+					command.Parameters.AddWithValue("@BookGUID", bookData.BookGUID);
+					command.ExecuteNonQuery();
+					connection.Close();
+				}
+			}
+		}
+
+		public int GenerateGemSeed(BookData bookData)
+		{
+			string combinedString = "";
+			// 모든 요소를 문자열로 결합
+			foreach (var diaryData in bookData.DiaryDataList)
+			{
+				combinedString += diaryData.Context;
+				combinedString += diaryData.Date;
+				combinedString += diaryData.DayType;
+				combinedString += diaryData.IsTaskADone;
+				combinedString += diaryData.IsTaskBDone;
+				combinedString += diaryData.RateA;
+				combinedString += diaryData.RateB;
+				combinedString += diaryData.TargetBook;
+				combinedString += diaryData.Weather;
+			}
+			// MD5 해시 생성
+			using (MD5 md5Hasher = MD5.Create())
+			{
+				var hashed = md5Hasher.ComputeHash(Encoding.UTF8.GetBytes(combinedString));
+				return BitConverter.ToInt32(hashed, 0);
+			}
 		}
 	}
 }

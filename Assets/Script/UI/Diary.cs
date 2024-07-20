@@ -4,6 +4,7 @@ using Script.Gem;
 using Script.SQLite;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Util.EventSystem;
 
@@ -70,7 +71,7 @@ namespace Script.UI
                 				_diaryData.IsTaskBDone = value;
                 			});
                 			evaluation1.onValueChanged.AddListener(value =>
-                			{
+			                {
                 				if (_diaryData == null)
                 					return;
                 				_diaryData.RateA = (int)value;

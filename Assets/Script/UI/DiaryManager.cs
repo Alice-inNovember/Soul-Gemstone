@@ -60,7 +60,12 @@ namespace Script.UI
 
 		public void SetDiaryInfo(BookData bookData, List<DiaryData> diaryDataList)
 		{
-			uniqueGem.Create(bookData.GemSeed);
+			FindObjectOfType<DataManager>().IsCompletedCheck(bookData);
+			var todayWeek = DateTime.Today.DayOfWeek;
+			if (bookData.IsCompleted && todayWeek != DayOfWeek.Saturday)
+			{
+				uniqueGem.Create(bookData.GemSeed);
+			}
 			var startingDay = DateTime.Parse(bookData.StartingDay);
 			var fullDateTime = startingDay.ToString("yyyy") + " " + startingDay.ToString("MMMM dd") + " ~ " +
 			                   startingDay.AddDays(6).ToString("MMMM dd");
