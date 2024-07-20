@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
+using Script.Gem;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Util.EventSystem;
@@ -25,12 +27,17 @@ namespace Script.UI
 		[SerializeField] private Button taskInputFinishButton;
 		[SerializeField] private Button toBookShelfButton;
 		[SerializeField] private Button saveButton;
-
+		[SerializeField] private Button gemInspectorButton;
+		[SerializeField] private Button gemInspectorExitButton;
+		[SerializeField] private GameObject diaryPage;
+		[SerializeField] private GameObject gemInspector;
 		[SerializeField] private TMP_InputField taskAInput;
 		[SerializeField] private TMP_InputField taskBInput;
 
 		private void Start()
 		{
+			gemInspectorButton.onClick.AddListener(InspectGem);
+			gemInspectorExitButton.onClick.AddListener(InspectOut);
 			startEditButton.onClick.AddListener(StartEdit);
 			taskInputFinishButton.onClick.AddListener(FinishTaskInputButton);
 			toBookShelfButton.onClick.AddListener(() => SetUIState(EuiState.BookShelf));
@@ -68,6 +75,24 @@ namespace Script.UI
 			bookData.TaskB = taskBInput.text;
 			diaryManager.SetDiaryInfo(bookData, bookData.DiaryDataList);
 			diaryManager.SetDiaryFocus((int)DateTime.Today.DayOfWeek + 1);
+		}
+
+		private void InspectGem()
+		{
+			FindObjectOfType<InputManager>().enabled = false;
+			FindObjectOfType<UniqueGem>().killRotate();
+			diaryPage.SetActive(false);
+			gemInspectorExitButton.gameObject.SetActive(true);
+			gemInspector.SetActive(true);
+		}
+
+		private void InspectOut()
+		{
+			FindObjectOfType<InputManager>().enabled = true;
+			FindObjectOfType<UniqueGem>().DoRotate();
+			diaryPage.SetActive(true);
+			gemInspectorExitButton.gameObject.SetActive(false);
+			gemInspector.SetActive(false);
 		}
 
 		private void SaveButton()

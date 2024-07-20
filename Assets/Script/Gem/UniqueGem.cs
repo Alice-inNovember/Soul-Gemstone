@@ -1,5 +1,6 @@
 using DG.Tweening;
 using Script.ScriptableObject;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,12 +14,44 @@ namespace Script.Gem
         [SerializeField] private GameObject shape;
         [SerializeField] private Material material;
         private Renderer _renderer;
-
+        private bool isRotate = true;
+        private Tween rotationTween; // Tween 객체를 저장할 변수
+        private Vector3 initialPosition;
+        
         private void Start()
         {
-            transform.DORotate(new Vector3(0.5f, 1.0f, 1.5f), 0.1f).SetLoops(-1, LoopType.Incremental);
+            DoRotateGem(isRotate);
         }
 
+        public void killRotate()
+        {
+            DoRotateGem(false);
+        }
+
+        public void DoRotate()
+        {
+            DoRotateGem(true);
+        }
+
+        private void DoRotateGem(bool isFocus)
+        {
+            if (isFocus)
+            {
+                gameObject.transform.position = new Vector3(0f, 0f, 0f);
+                gameObject.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+                // Tween 객체 저장
+                rotationTween = transform.DORotate(new Vector3(0.5f, 1.0f, 1.5f), 0.1f).SetLoops(-1, LoopType.Incremental);
+            }
+            else
+            {
+                // Tween 멈추기
+                if (rotationTween != null)
+                {
+                    rotationTween.Kill();
+                    rotationTween = null;
+                }
+            }
+        }
         public void Create(int creationSeed)
         {
             seed = creationSeed;

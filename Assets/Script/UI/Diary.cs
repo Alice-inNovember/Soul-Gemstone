@@ -29,54 +29,71 @@ namespace Script.UI
 		[SerializeField] private Slider evaluation2;
 
 		private DiaryData _diaryData;
+		private DateTime _thisDateTime;
 
 		private void Start()
 		{
-			sunnyButton.onClick.AddListener(() =>
+			_thisDateTime = DateTime.Today;
+			if (dateText.text == _thisDateTime.ToString("yyyy MMMM dd"))
 			{
-				_diaryData.Weather = EWeather.Sunny;
-				weatherText.text = "맑음";
-			});
-			cloudyButton.onClick.AddListener(() =>
+				sunnyButton.onClick.AddListener(() =>
+                			{
+                				_diaryData.Weather = EWeather.Sunny;
+                				weatherText.text = "맑음";
+                			});
+                			cloudyButton.onClick.AddListener(() =>
+                			{
+                				_diaryData.Weather = EWeather.Cloudy;
+                				weatherText.text = "흐림";
+                			});
+                			rainyButton.onClick.AddListener(() =>
+                			{
+                				_diaryData.Weather = EWeather.Rainy;
+                				weatherText.text = "비";
+                			});
+                			diaryText.onEndEdit.AddListener(text =>
+                			{
+                				if (_diaryData == null)
+                					return;
+                				_diaryData.Context = text;
+                			});
+                			isCheck1.onValueChanged.AddListener(value =>
+                			{
+                				if (_diaryData == null)
+                					return;
+                				_diaryData.IsTaskADone = value;
+                			});
+                			isCheck2.onValueChanged.AddListener(value =>
+                			{
+                				if (_diaryData == null)
+                					return;
+                				_diaryData.IsTaskBDone = value;
+                			});
+                			evaluation1.onValueChanged.AddListener(value =>
+                			{
+                				if (_diaryData == null)
+                					return;
+                				_diaryData.RateA = (int)value;
+                			});
+                			evaluation2.onValueChanged.AddListener(value =>
+                			{
+                				if (_diaryData == null)
+                					return;
+                				_diaryData.RateB = (int)value;
+                			});
+			}
+			else
 			{
-				_diaryData.Weather = EWeather.Cloudy;
-				weatherText.text = "흐림";
-			});
-			rainyButton.onClick.AddListener(() =>
-			{
-				_diaryData.Weather = EWeather.Rainy;
-				weatherText.text = "비";
-			});
-			diaryText.onEndEdit.AddListener(text =>
-			{
-				if (_diaryData == null)
-					return;
-				_diaryData.Context = text;
-			});
-			isCheck1.onValueChanged.AddListener(value =>
-			{
-				if (_diaryData == null)
-					return;
-				_diaryData.IsTaskADone = value;
-			});
-			isCheck2.onValueChanged.AddListener(value =>
-			{
-				if (_diaryData == null)
-					return;
-				_diaryData.IsTaskBDone = value;
-			});
-			evaluation1.onValueChanged.AddListener(value =>
-			{
-				if (_diaryData == null)
-					return;
-				_diaryData.RateA = (int)value;
-			});
-			evaluation2.onValueChanged.AddListener(value =>
-			{
-				if (_diaryData == null)
-					return;
-				_diaryData.RateB = (int)value;
-			});
+				sunnyButton.interactable = false;
+				cloudyButton.interactable = false;
+				rainyButton.interactable = false;
+				diaryText.interactable = false;
+				isCheck1.interactable = false;
+				isCheck2.interactable = false;
+				evaluation1.interactable = false;
+				evaluation2.interactable = false;
+			}
+			
 		}
 		
 		public void SetDiary(DiaryData diaryData)
