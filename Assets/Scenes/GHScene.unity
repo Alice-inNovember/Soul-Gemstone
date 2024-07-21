@@ -575,6 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 207574070}
   - component: {fileID: 207574073}
+  - component: {fileID: 207574074}
   - component: {fileID: 207574071}
   m_Layer: 0
   m_Name: GemFocusCamera
@@ -693,6 +694,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &207574074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207574069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0874225577c04f4eada501bacc579ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &215043242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3640,7 +3653,7 @@ Transform:
   m_GameObject: {fileID: 1231669368}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2969999, y: 0.24599999, z: 0.60899997}
+  m_LocalPosition: {x: -1.2969999, y: 0.2460022, z: 0.60899997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6731,6 +6744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007751804}
   - component: {fileID: 2007751807}
+  - component: {fileID: 2007751808}
   - component: {fileID: 2007751805}
   m_Layer: 0
   m_Name: GemTextureCamera
@@ -6849,6 +6863,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2007751808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007751803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0874225577c04f4eada501bacc579ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2116794543
 GameObject:
   m_ObjectHideFlags: 0
