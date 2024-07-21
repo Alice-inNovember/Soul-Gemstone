@@ -73,6 +73,7 @@ namespace Script.UI
 			var bookData = bookManager.CreateBook();
 			bookData.TaskA = taskAInput.text;
 			bookData.TaskB = taskBInput.text;
+			bookManager.SetBookFocus(0);
 			diaryManager.SetDiaryInfo(bookData, bookData.DiaryDataList);
 			diaryManager.SetDiaryFocus((int)DateTime.Today.DayOfWeek + 1);
 		}

@@ -35,60 +35,39 @@ namespace Script.UI
 
 		private void Start()
 		{
-			_thisDateTime = DateTime.Today;
-			if (dateText.text == _thisDateTime.ToString("yyyy MMMM dd"))
+			sunnyButton.onClick.AddListener(() =>
 			{
-				sunnyButton.onClick.AddListener(() =>
-                			{
-                				_diaryData.Weather = EWeather.Sunny;
-                				weatherText.text = "맑음";
-                			});
-                			cloudyButton.onClick.AddListener(() =>
-                			{
-                				_diaryData.Weather = EWeather.Cloudy;
-                				weatherText.text = "흐림";
-                			});
-                			rainyButton.onClick.AddListener(() =>
-                			{
-                				_diaryData.Weather = EWeather.Rainy;
-                				weatherText.text = "비";
-                			});
-                			diaryText.onEndEdit.AddListener(text =>
-                			{
-                				if (_diaryData == null)
-                					return;
-                				_diaryData.Context = text;
-                			});
-                			isCheck1.onValueChanged.AddListener(value =>
-                			{
-                				if (_diaryData == null)
-                					return;
-                				_diaryData.IsTaskADone = value;
-                			});
-                			isCheck2.onValueChanged.AddListener(value =>
-                			{
-                				if (_diaryData == null)
-                					return;
-                				_diaryData.IsTaskBDone = value;
-                			});
-			}
-			else
+				_diaryData.Weather = EWeather.Sunny;
+				weatherText.text = "맑음";
+			});
+			cloudyButton.onClick.AddListener(() =>
 			{
-				sunnyButton.interactable = false;
-				cloudyButton.interactable = false;
-				rainyButton.interactable = false;
-				diaryText.interactable = false;
-				isCheck1.interactable = false;
-				isCheck2.interactable = false;
-				foreach (var button in evaluationA)
-				{
-					button.interactable = false;
-				}
-				foreach (var button in evaluationB)
-				{
-					button.interactable = false;
-				}
-			}
+				_diaryData.Weather = EWeather.Cloudy;
+				weatherText.text = "흐림";
+			});
+			rainyButton.onClick.AddListener(() =>
+			{
+				_diaryData.Weather = EWeather.Rainy;
+				weatherText.text = "비";
+			});
+			diaryText.onEndEdit.AddListener(text =>
+			{
+				if (_diaryData == null)
+					return;
+				_diaryData.Context = text;
+			});
+			isCheck1.onValueChanged.AddListener(value =>
+			{
+				if (_diaryData == null)
+					return;
+				_diaryData.IsTaskADone = value;
+			});
+			isCheck2.onValueChanged.AddListener(value =>
+			{
+				if (_diaryData == null)
+					return;
+				_diaryData.IsTaskBDone = value;
+			});
 		}
 
 		public void SetEvalA(int score)
@@ -112,6 +91,41 @@ namespace Script.UI
 			_diaryData = diaryData;
 			dateText.text = diaryData.Date;
 			diaryText.text = diaryData.Context;
+
+			if (DateTime.Parse(_diaryData.Date).ToString("yyyy MMMM dd") != DateTime.Today.ToString("yyyy MMMM dd"))
+			{
+				sunnyButton.interactable = false;
+				cloudyButton.interactable = false;
+				rainyButton.interactable = false;
+				diaryText.interactable = false;
+				isCheck1.interactable = false;
+				isCheck2.interactable = false;
+				foreach (var button in evaluationA)
+				{
+					button.interactable = false;
+				}
+				foreach (var button in evaluationB)
+				{
+					button.interactable = false;
+				}
+			}
+			else
+			{
+				sunnyButton.interactable = true;
+				cloudyButton.interactable = true;
+				rainyButton.interactable = true;
+				diaryText.interactable = true;
+				isCheck1.interactable = true;
+				isCheck2.interactable = true;
+				foreach (var button in evaluationA)
+				{
+					button.interactable = true;
+				}
+				foreach (var button in evaluationB)
+				{
+					button.interactable = true;
+				}
+			}
 			
 			switch (diaryData.Weather)
 			{
