@@ -52,8 +52,14 @@ namespace Script.Gem
                 }
             }
         }
+
+        private bool isCreate = false;
+        
         public void Create(int creationSeed)
         {
+            if (random)
+                seed = Random.Range(0, int.MaxValue);
+            Random.InitState(seed);
             seed = creationSeed;
             if (seed == -1)
             {
@@ -63,22 +69,22 @@ namespace Script.Gem
             if (shape)
                 Destroy(shape);
             shape = Instantiate(shapeListData.shapeList[Random.Range(0, shapeListData.shapeList.Count)], transform);
-            _renderer = shape.GetComponentInChildren<Renderer>();
-            _renderer.material = material;
-            _renderer.material.SetColor(ShaderID.Color1, Random.ColorHSV(0, 1, 0.3f, 1, 0.3f, 0.8f));
-            _renderer.material.SetColor(ShaderID.Color2, Random.ColorHSV(0, 1, 0.3f, 1, 0.7f, 0.8f));
-            _renderer.material.SetFloat(ShaderID.FragResolution, Random.Range(1.0f, 3f));
-            _renderer.material.SetFloat(ShaderID.FragLuminance1 , Random.Range(1.0f, 6f));
-            _renderer.material.SetFloat(ShaderID.FragDensity1 , Random.Range(1f, 9f));
-            _renderer.material.SetFloat(ShaderID.FragOffset1 , Random.Range(1.0f, 100));
-            _renderer.material.SetFloat(ShaderID.FragLuminance2 , Random.Range(1.0f, 6f));
-            _renderer.material.SetFloat(ShaderID.FragDensity2 , Random.Range(2f, 6f));
-            _renderer.material.SetFloat(ShaderID.FragOffset2 , Random.Range(1.0f, 100));
-            _renderer.material.SetFloat(ShaderID.VertDensity , Random.Range(3.0f, 50f));
-            _renderer.material.SetFloat(ShaderID.VertStrength , Random.Range(-1.0f, 1f));
-            _renderer.material.SetFloat(ShaderID.VertOffset , Random.Range(1.0f, 100));
-            var scale = 1 - _renderer.material.GetFloat(ShaderID.VertStrength) / 3;
-            transform.localScale = new Vector3(scale, scale, scale);
+            //_renderer = shape.GetComponentInChildren<Renderer>();
+            //_renderer.material = material;
+            //_renderer.material.SetColor(ShaderID.Color1, Random.ColorHSV(0, 1, 0.3f, 1, 0.3f, 0.8f));
+            //_renderer.material.SetColor(ShaderID.Color2, Random.ColorHSV(0, 1, 0.3f, 1, 0.7f, 0.8f));
+            //_renderer.material.SetFloat(ShaderID.FragResolution, Random.Range(1.0f, 3f));
+            //_renderer.material.SetFloat(ShaderID.FragLuminance1 , Random.Range(1.0f, 6f));
+            //_renderer.material.SetFloat(ShaderID.FragDensity1 , Random.Range(1f, 9f));
+            //_renderer.material.SetFloat(ShaderID.FragOffset1 , Random.Range(1.0f, 100));
+            //_renderer.material.SetFloat(ShaderID.FragLuminance2 , Random.Range(1.0f, 6f));
+            //_renderer.material.SetFloat(ShaderID.FragDensity2 , Random.Range(2f, 6f));
+            //_renderer.material.SetFloat(ShaderID.FragOffset2 , Random.Range(1.0f, 100));
+            //_renderer.material.SetFloat(ShaderID.VertDensity , Random.Range(3.0f, 50f));
+            //_renderer.material.SetFloat(ShaderID.VertStrength , Random.Range(-1.0f, 1f));
+            //_renderer.material.SetFloat(ShaderID.VertOffset , Random.Range(1.0f, 100));
+            //var scale = 1 - _renderer.material.GetFloat(ShaderID.VertStrength) / 3;
+            //transform.localScale = new Vector3(scale, scale, scale);
         }
         private struct ShaderID
         {
