@@ -50,8 +50,8 @@ namespace Script.UI
 		{
 			foreach (var book in bookManager.bookList)
 			{
-				if (!book.Data.DiaryDataList.Any(diaryData => IsToday(diaryData.Date)))
-					continue;
+				//if (!book.Data.DiaryDataList.Any(diaryData => IsToday(diaryData.Date)))
+				//	continue;
 				SetUIState(EuiState.Diary);
 				diaryManager.SetDiaryInfo(book.Data, book.Data.DiaryDataList);
 				diaryManager.SetDiaryFocus((int)DateTime.Today.DayOfWeek + 1);
